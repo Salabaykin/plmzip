@@ -1,4 +1,5 @@
 /* Common */
+@import "../components/sale/sale.css";
 @import "../components/page/page.css";
 @import "../components/button/button.css";
 @import "../components/form/form.css";

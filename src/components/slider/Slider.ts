@@ -11,6 +11,7 @@ export const slider = ({
   selector,
   paginationSelector,
 }: { selector: string; paginationSelector: string }) => new Swiper(selector, {
+  spaceBetween: 10,
   pagination: {
     el: paginationSelector,
     clickable: true,
