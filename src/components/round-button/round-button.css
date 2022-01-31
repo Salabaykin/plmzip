@@ -1,0 +1,16 @@
+.round-button {
+  width: 39px;
+  height: 39px;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.round-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}

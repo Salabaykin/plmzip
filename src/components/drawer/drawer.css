@@ -1,0 +1,118 @@
+.drawer {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  display: none;
+}
+
+.drawer_is_visible {
+  display: block;
+}
+
+.drawer__overlay {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(0 0 0 / 50%);
+  z-index: -1;
+}
+
+.drawer__sidebar {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 26px;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px 10px 0 0;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.drawer__title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.drawer__close {
+  width: 45px;
+  height: 45px;
+  background: transparent url("./close.svg") center no-repeat;
+  background-size: 18px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: visibility 0s, opacity 0.3s;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.drawer__close:hover {
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .drawer {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    display: none;
+  }
+
+  .drawer_is_visible {
+    display: block;
+  }
+
+  .drawer__overlay {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+    z-index: -1;
+  }
+
+  .drawer__sidebar {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    min-width: 230px;
+    width: auto;
+    background-color: #fff;
+    padding: 10px 16px;
+    border-radius: 0;
+  }
+
+  .drawer__title {
+    display: none;
+  }
+
+  .drawer__close {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .drawer_is_visible {
+    display: none;
+  }
+}

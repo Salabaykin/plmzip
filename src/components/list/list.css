@@ -1,0 +1,144 @@
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  position: relative;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.list_type_inline {
+  display: flex;
+  flex-direction: row;
+}
+
+.list__item {
+  margin-right: 8px;
+}
+
+.list__item:last-child {
+  margin-right: 16px;
+}
+
+.list__item-icon {
+  margin-right: 5px;
+}
+
+.list__item-link {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: var(--color-black);
+  border: 1px solid var(--color-light);
+  border-radius: 5px;
+  transition: opacity 0.2s;
+}
+
+.list__item-link:hover {
+  opacity: 0.6;
+}
+
+.list__item-text {
+  white-space: nowrap;
+}
+
+.list__item-submenu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .list {
+    overflow-x: auto;
+    justify-content: space-between;
+  }
+
+  .list__item {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin-right: 16px;
+  }
+
+  .list__item-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1280px) {
+  .list {
+    width: 300px;
+    flex-direction: column;
+    box-shadow: 0 5px 20px var(--color-light);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: visible;
+  }
+
+  .list__item {
+    margin-right: 0;
+  }
+
+  .list__item:last-child {
+    margin-right: 0;
+  }
+
+  .list__item-link {
+    font-size: 20px;
+    justify-content: start;
+    border: none;
+    padding: 38px 0 38px 39px;
+    border-radius: 0;
+  }
+
+  .list__item-link:hover {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    opacity: 1;
+  }
+
+  .list__item-icon {
+    margin-right: 10px;
+  }
+
+  .list__item-submenu {
+    /* Absolute position */
+    left: 300px;
+    position: absolute;
+    top: 0;
+    display: none; /* none */
+    flex-direction: row;
+    justify-content: space-between;
+    width: 990px;
+    height: 400px;
+    overflow-y: scroll;
+    background-color: #fff;
+    border-radius: 0 0 10px;
+    box-shadow: 0 5px 20px var(--color-light);
+    border-left: 2px solid var(--color-light);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    scrollbar-color: var(--color-light) transparent;
+    scrollbar-width: auto;
+  }
+
+  .list__item:hover > .list__item-submenu {
+    display: flex;
+  }
+
+  .list__item-column {
+    margin: 0 15px;
+    padding: 0 15px;
+    width: 50%;
+  }
+}

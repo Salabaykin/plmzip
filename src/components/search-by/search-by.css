@@ -1,0 +1,138 @@
+.search-by {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-by__item {
+  width: 50%;
+  border-radius: 5px;
+  margin-right: 8px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-by__item:last-child {
+  margin-right: 0;
+}
+
+.search-by__link {
+  width: 100%;
+  border: 1px solid var(--color-light);
+  border-radius: 5px;
+  height: 70px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-black);
+  background-image: url("./search-by-back.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80px center;
+  position: relative;
+}
+
+.search-by__link:hover {
+  color: var(--color-primary);
+}
+
+.search-by__text {
+  display: block;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  max-width: 78px;
+}
+
+.search-by__image {
+  position: absolute;
+  background-size: cover;
+  z-index: 1;
+}
+
+.search-by__image_type_params {
+  right: -28px;
+  background-image: url("./search-by-params-mobile.png");
+  width: 79px;
+  height: 102px;
+}
+
+.search-by__image_type_scheme {
+  right: 0;
+  background-image: url("./search-by-scheme-mobile.png");
+  width: 90px;
+  height: 112px;
+}
+
+@media (min-width: 768px) {
+  .search-by__item {
+    margin-right: 16px;
+  }
+
+  .search-by__link {
+    padding: 16px;
+    height: 150px;
+    background-position-x: 200px;
+  }
+
+  .search-by__text {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 128px;
+  }
+
+  .search-by__image_type_params {
+    right: -36px;
+    background-image: url("./search-by-params-tablet.png");
+    width: 195px;
+    height: 219px;
+    z-index: 1;
+  }
+
+  .search-by__image_type_scheme {
+    right: 0;
+    background-image: url("./search-by-scheme.png");
+    width: 188px;
+    height: 240px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .search-by__image_type_scheme {
+    right: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .search-by__item {
+    margin-right: 30px;
+  }
+
+  .search-by__link {
+    height: 200px;
+    padding: 60px;
+    background-position-x: 306px;
+  }
+
+  .search-by__text {
+    font-size: 30px;
+    line-height: 40px;
+    max-width: 200px;
+  }
+
+  .search-by__image {
+    right: 0;
+    left: auto;
+  }
+
+  .search-by__image_type_params {
+    right: -40px;
+  }
+}

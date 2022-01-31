@@ -1,0 +1,38 @@
+.section {
+  margin-bottom: 50px;
+}
+
+.section__title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--color-black);
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    margin-bottom: 100px;
+  }
+
+  .section__title {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    margin-bottom: 200px;
+  }
+
+  .section__title {
+    font-size: 60px;
+    line-height: 77px;
+    margin-bottom: 30px;
+  }
+}

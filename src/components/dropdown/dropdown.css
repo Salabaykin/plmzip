@@ -1,0 +1,146 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown__trigger {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown__trigger_type_button {
+  background: none;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.dropdown__trigger_type_button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.dropdown__arrow-icon {
+  margin-left: 5px;
+}
+
+.dropdown__arrow-icon_is_rotated {
+  transform: rotate(180deg);
+}
+
+.dropdown__content {
+  display: none;
+
+  right: 0;
+  padding: 6px 16px;
+  position: absolute;
+  top: calc(100% + 8px);
+
+  background-color: #fff;
+  z-index: 9999;
+
+  border-radius: 0 0 10px 10px;
+  min-width: 132px;
+}
+
+.dropdown__content_is_visible {
+  display: block;
+  box-shadow: 0 5px 20px var(--color-light);
+}
+
+.dropdown__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown__list-item {
+  white-space: nowrap;
+  border-bottom: 1px solid rgb(0 113 188 / 10%);
+}
+
+.dropdown__list-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown__link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--color-black);
+  padding: 10px 0;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.dropdown__link_is_danger {
+  color: var(--color-danger);
+}
+
+.dropdown__link:hover {
+  color: var(--color-primary);
+}
+
+.dropdown__trigger-icon {
+  display: block;
+}
+
+.dropdown__trigger-text {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .dropdown__trigger {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .dropdown__trigger_type_inside {
+    margin-bottom: 20px;
+  }
+
+  .dropdown__trigger:hover {
+    color: var(--color-primary);
+  }
+
+  .dropdown__trigger-icon_type_mobile {
+    display: none;
+  }
+
+  .dropdown__trigger-text {
+    display: block;
+    font-family: var(--font-sans);
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    white-space: nowrap;
+  }
+
+  .dropdown__content {
+    padding: 30px 30px 10px;
+    box-shadow: 5px 5px 20px rgb(23 30 38 / 30%);
+    border-radius: 10px;
+  }
+
+  .dropdown__content_is_visible {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+  }
+
+  .dropdown__list-item {
+    border-top: 1px solid rgb(0 113 188 / 10%);
+    border-bottom: none;
+  }
+
+  .dropdown__link {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 20px 0;
+    display: block;
+  }
+
+  .dropdown__trigger-icon {
+    margin-right: 10px;
+  }
+}
