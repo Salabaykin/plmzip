@@ -1,6 +1,7 @@
 import './index.css';
 
 import { Dropdown } from '../components/dropdown/Dropdown';
+import { slider } from '../components/slider/Slider';
 import { Popup } from '../components/popup/Popup';
 import { Drawer } from '../components/drawer/Drawer';
 import { PasswordType } from '../components/form/Form';
@@ -8,6 +9,14 @@ import { Accordion } from '../components/accordion/Accordion';
 import { Visibility } from '../components/visibility/Visibility';
 import { Brands } from '../components/brands/Brands';
 import { Footer } from '../components/footer/Footer';
+
+/* Slider */
+const sliders = document.querySelectorAll('.slider');
+if (sliders.length) {
+  sliders.forEach(() => {
+    slider({ selector: '.slider', paginationSelector: '.swiper-pagination' });
+  });
+}
 
 /* Logged in Dropdown */
 const dropdownsList = document.querySelectorAll('.js-dropdown');
