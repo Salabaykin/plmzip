@@ -23,6 +23,8 @@
     "vite": "^2.7.2"
   },
   "dependencies": {
+    "@types/inputmask": "^5.0.1",
+    "inputmask": "^5.0.7",
     "swiper": "^7.3.3",
     "tippy.js": "^6.3.7"
   }

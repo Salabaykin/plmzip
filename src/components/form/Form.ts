@@ -1,3 +1,57 @@
+import Inputmask from 'inputmask';
+
+interface Mask {
+  selector: string,
+  inputmode?: string,
+  inputMask?: string,
+  placeholder?: string,
+  alias?: string
+}
+
+const checkValue = (input, inputMask) => {
+  const { value } = input;
+  const isValid = Inputmask.isValid(value, { mask: inputMask });
+
+  if (isValid) {
+    input
+      .closest('.input-field')
+      .classList
+      .remove('error');
+  } else {
+    input
+      .closest('.input-field')
+      .classList
+      .add('error');
+  }
+};
+
+export const mask = ({
+  selector,
+  inputmode = 'text',
+  inputMask,
+  placeholder = '',
+  alias = '',
+}: Mask) => {
+  const element = document.querySelector(selector);
+
+  if (element) {
+    // @ts-ignore
+    Inputmask({
+      mask: inputMask,
+      showMaskOnHover: false,
+      placeholder,
+      inputmode,
+      alias,
+      onincomplete(): void {
+        checkValue(this, inputMask);
+      },
+      oncomplete(): void {
+        checkValue(this, inputMask);
+      },
+    }).mask(element);
+  }
+};
+
 export class PasswordType {
   private readonly togglePasswordButtonElement: HTMLButtonElement;
 

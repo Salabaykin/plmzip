@@ -10,19 +10,7 @@
 
     <!-- Surname -->
     <div style="display: none" class="sign-up__content">
-      <a href="#" class="sign-up__back">
-        <svg class="sign-up__back-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_10_12222)">
-            <path d="M15.1516 18.2536C15.745 17.7132 15.7451 16.7796 15.1518 16.2391L12.6863 13.9929L8.70925 10.3696L8.30356 10L8.70925 9.63039L12.6863 6.00713L15.1518 3.76094C15.7451 3.22043 15.745 2.28681 15.1516 1.74641C14.4857 1.13996 13.4677 1.14004 12.8019 1.7466L8.82503 5.36961L4.95957 8.89116C4.30648 9.48614 4.30648 10.5139 4.95957 11.1088L8.82503 14.6304L12.8019 18.2534C13.4677 18.86 14.4857 18.86 15.1516 18.2536ZM15.1516 18.2536L15.4883 18.6233L15.1516 18.2536Z" stroke="white"/>
-          </g>
-          <defs>
-            <clipPath id="clip0_10_12222">
-              <rect width="20" height="20" fill="white" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 20 20)"/>
-            </clipPath>
-          </defs>
-        </svg>
-        <span class="sign-up__back-text">Назад</span>
-      </a>
+      <a href="#" class="sign-up__back">Назад</a>
       <div class="sign-up__logo">
         <img src="/logo.svg" alt="Логотип PLMZIP">
       </div>
@@ -30,28 +18,47 @@
         <section class="sign-up-form__section">
           <h3 class="sign-up-form__title">Введите фамилию</h3>
           <label class="sign-up-form__label" for="surname">Заполните, чтобы мы знали, как к вам обращаться.</label>
-          <input type="text" name="surname" id="surname" class="sign-up-form__input" required>
-          <span class="sign-up-form__error" id="sign-up-form-error"></span>
+          <div class="input-field">
+            <input
+              type="text"
+              name="surname"
+              id="surname"
+              class="sign-up-form__input"
+            >
+          </div>
+        </section>
+        <button class="button sign-up-form__button">Далее</button>
+      </form>
+    </div>
+
+    <!-- Telephone -->
+    <div style="display: none" class="sign-up__content">
+      <a href="#" class="sign-up__back">Назад</a>
+      <div class="sign-up__logo">
+        <img src="/logo.svg" alt="Логотип PLMZIP">
+      </div>
+      <form class="sign-up-form" name="sign-up">
+        <section class="sign-up-form__section">
+          <h3 class="sign-up-form__title">Введите номер телефона</h3>
+          <label class="sign-up-form__label" for="phone">Необходим для уточнения деталей заказа.</label>
+          <div class="input-field">
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              class="sign-up-form__input"
+              placeholder="+7(___)___-__-__"
+            >
+            <span class="error-info" data-tippy-content="Введите номер телефона!"></span>
+          </div>
         </section>
         <button class="button sign-up-form__button">Далее</button>
       </form>
     </div>
 
     <!-- SMS -->
-    <div class="sign-up__content">
-      <a href="#" class="sign-up__back">
-        <svg class="sign-up__back-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_10_12222)">
-            <path d="M15.1516 18.2536C15.745 17.7132 15.7451 16.7796 15.1518 16.2391L12.6863 13.9929L8.70925 10.3696L8.30356 10L8.70925 9.63039L12.6863 6.00713L15.1518 3.76094C15.7451 3.22043 15.745 2.28681 15.1516 1.74641C14.4857 1.13996 13.4677 1.14004 12.8019 1.7466L8.82503 5.36961L4.95957 8.89116C4.30648 9.48614 4.30648 10.5139 4.95957 11.1088L8.82503 14.6304L12.8019 18.2534C13.4677 18.86 14.4857 18.86 15.1516 18.2536ZM15.1516 18.2536L15.4883 18.6233L15.1516 18.2536Z" stroke="white"/>
-          </g>
-          <defs>
-            <clipPath id="clip0_10_12222">
-              <rect width="20" height="20" fill="white" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 20 20)"/>
-            </clipPath>
-          </defs>
-        </svg>
-        <span class="sign-up__back-text">Назад</span>
-      </a>
+    <div style="display: none" class="sign-up__content">
+      <a href="#" class="sign-up__back">Назад</a>
       <div class="sign-up__logo">
         <img src="/logo.svg" alt="Логотип PLMZIP">
       </div>
@@ -59,24 +66,120 @@
         <section class="sign-up-form__section">
           <h3 class="sign-up-form__title">Введите код из SMS</h3>
           <label class="sign-up-form__label">Подтвердите пожалуйста ваш номер телефона. Мы отправили SMS на +7 (707) 070 - 70 - 70</label>
-          <div class="sign-up-form__sms">
-            <input type="number" name="code-1" id="code-1" class="sign-up-form__input code" autocomplete="off" required>
-            <input type="number" name="code-2" id="code-2" class="sign-up-form__input code" autocomplete="off" required>
-            <input type="number" name="code-3" id="code-3" class="sign-up-form__input code" autocomplete="off" required>
-            <input type="number" name="code-4" id="code-4" class="sign-up-form__input code" autocomplete="off" required>
-            <input type="hidden" name="sms" value="">
+          <div class="input-field">
+            <input type="text" maxlength="1" name="code-1" id="code-1" class="sign-up-form__input code" autocomplete="off">
+            <input type="text" maxlength="1" name="code-2" id="code-2" class="sign-up-form__input code" autocomplete="off">
+            <input type="text" maxlength="1" name="code-3" id="code-3" class="sign-up-form__input code" autocomplete="off">
+            <input type="text" maxlength="1" name="code-4" id="code-4" class="sign-up-form__input code" autocomplete="off">
+            <span class="error-info" data-tippy-content="Неверный код!"></span>
           </div>
           <a href="#" class="sign-up__resend-code">Отправить код повторно</a>
-          <span
-            class="sign-up-form__error"
-            id="sign-up-form-error"
-            data-tippy-content="Неверный код!"
-            data-tippy-theme="light"
-          >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.71201 0.0651116C5.39182 0.500052 2.48848 2.59082 1.01771 5.60595C-0.339235 8.38759 -0.339235 11.6076 1.01771 14.3893C2.53169 17.493 5.50251 19.574 8.96595 19.9569C9.76346 20.045 11.0379 19.9939 11.8452 19.8414C15.3901 19.1719 18.3196 16.6242 19.477 13.2042C20.1743 11.1438 20.1743 8.85146 19.477 6.79109C18.2333 3.11599 14.9534 0.471541 11.105 0.041063C10.5344 -0.0227689 9.28703 -0.0102279 8.71201 0.0651116ZM10.7925 5.09543C11.1264 5.18247 11.6056 5.43639 11.9105 5.68782C12.967 6.55896 13.2981 8.06153 12.7011 9.27584C12.4856 9.71411 12.1216 10.0855 11.4985 10.5029C11.0022 10.8354 11.0005 10.8372 10.9762 11.0531C10.9179 11.5711 10.4976 11.9465 9.97887 11.944C9.29688 11.9407 8.91504 11.4164 8.98242 10.5759C9.03131 9.96601 9.3841 9.50463 10.2411 8.92981C10.8944 8.49163 10.988 8.37909 10.9866 8.03302C10.9824 6.93651 9.60562 6.59382 9.10652 7.56506C9.0573 7.66092 9.017 7.80479 9.017 7.88478C9.017 8.5758 8.42059 9.10975 7.80377 8.971C7.3265 8.86368 6.99941 8.44555 6.99941 7.94274C6.99941 7.125 7.43629 6.22787 8.10087 5.6811C8.34786 5.47786 8.83527 5.2067 9.11304 5.11798C9.58201 4.96814 10.2691 4.95894 10.7925 5.09543ZM10.4016 13.0913C11.1446 13.4292 11.1846 14.4837 10.4695 14.8813C9.96775 15.1602 9.31086 14.932 9.08963 14.4019C8.745 13.5762 9.59679 12.7253 10.4016 13.0913Z" fill="#FA3131"/>
-            </svg>
-          </span>
+        </section>
+        <button class="button sign-up-form__button">Далее</button>
+      </form>
+    </div>
+
+    <!-- E-Mail -->
+    <div style="display: none" class="sign-up__content">
+      <a href="#" class="sign-up__back">Назад</a>
+      <div class="sign-up__logo">
+        <img src="/logo.svg" alt="Логотип PLMZIP">
+      </div>
+      <form class="sign-up-form" name="sign-up">
+        <section class="sign-up-form__section">
+          <h3 class="sign-up-form__title">Введите E-mail</h3>
+          <label class="sign-up-form__label" for="email">Для отправки уведомлений о статусе заказа. Используйте как логин для входа в личный кабинет.</label>
+          <div class="input-field">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              class="sign-up-form__input"
+              placeholder="exemple@gmail.com"
+            >
+            <span class="error-info" data-tippy-content="Введите E-Mail!"></span>
+          </div>
+        </section>
+        <button class="button sign-up-form__button">Далее</button>
+      </form>
+    </div>
+
+    <!-- Captcha -->
+    <div style="display: none" class="sign-up__content">
+      <a href="#" class="sign-up__back">Назад</a>
+      <div class="sign-up__logo">
+        <img src="/logo.svg" alt="Логотип PLMZIP">
+      </div>
+      <form class="sign-up-form" name="sign-up">
+        <section class="sign-up-form__section">
+          <h3 class="sign-up-form__title">Введите код из рисунка</h3>
+          <div class="input-field">
+            <span class="sign-up-form__captcha">Captcha</span>
+            <input
+              type="text"
+              name="captcha"
+              id="captcha"
+              class="sign-up-form__input"
+            >
+            <span class="error-info" data-tippy-content="Введите код!"></span>
+          </div>
+        </section>
+        <button class="button sign-up-form__button">Далее</button>
+      </form>
+    </div>
+
+    <!-- Account verification -->
+    <div style="display: none" class="sign-up__content">
+      <a href="#" class="sign-up__back">Назад</a>
+      <div class="sign-up__logo">
+        <img src="/logo.svg" alt="Логотип PLMZIP">
+      </div>
+      <form class="sign-up-form" name="sign-up">
+        <section class="sign-up-form__section">
+          <h3 class="sign-up-form__title">Подтверждение аккаунта</h3>
+          <label class="sign-up-form__label" for="email">
+            Пожалуйста ознакомьтесь с правилами хранения личных данных пользователя - <a href="#">Ознакомиться</a>.
+          </label>
+          <div class="confirm">
+            <div class="checkbox">
+              <input type="checkbox" name="confirm" id="confirm">
+              <label for="confirm">
+                Нажимая кнопку вы даете согласие на <a href="#">обработку персональных данных</a>
+              </label>
+            </div>
+          </div>
+        </section>
+        <button class="button sign-up-form__button">Зарегистрироваться</button>
+      </form>
+    </div>
+
+    <!-- Password -->
+    <div style="display: block" class="sign-up__content">
+      <a href="#" class="sign-up__back">Назад</a>
+      <div class="sign-up__logo">
+        <img src="/logo.svg" alt="Логотип PLMZIP">
+      </div>
+      <form class="sign-up-form" name="sign-up">
+        <section class="sign-up-form__section">
+          <h3 class="sign-up-form__title">Подтвердите пароль</h3>
+          <label class="sign-up-form__label" for="password">
+            Введите пароль повторно для подтверждения.
+            Пароль должен состоять минимум из 6 знаков.
+          </label>
+          <div class="input-field">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="sign-up-form__input"
+              minlength="6"
+              required
+            >
+            <button class="form__toggle-password" type="button"
+                    aria-label="Показать пароль как простой текст. Предупреждение: это покажет ваш пароль на экране.">
+            </button>
+            <span class="error-info" data-tippy-content="Подтвердите пароль!"></span>
+          </div>
         </section>
         <button class="button sign-up-form__button">Далее</button>
       </form>
