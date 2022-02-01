@@ -2,10 +2,8 @@ import Inputmask from 'inputmask';
 
 interface Mask {
   selector: string,
-  inputmode?: string,
   inputMask?: string,
-  placeholder?: string,
-  alias?: string
+  placeholder?: string
 }
 
 const checkValue = (input, inputMask) => {
@@ -27,10 +25,8 @@ const checkValue = (input, inputMask) => {
 
 export const mask = ({
   selector,
-  inputmode = 'text',
   inputMask,
   placeholder = '',
-  alias = '',
 }: Mask) => {
   const element = document.querySelector(selector);
 
@@ -40,12 +36,10 @@ export const mask = ({
       mask: inputMask,
       showMaskOnHover: false,
       placeholder,
-      inputmode,
-      alias,
-      onincomplete(): void {
+      onincomplete() {
         checkValue(this, inputMask);
       },
-      oncomplete(): void {
+      oncomplete() {
         checkValue(this, inputMask);
       },
     }).mask(element);

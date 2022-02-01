@@ -13,6 +13,7 @@ module.exports = defineConfig({
       input: {
         index: resolve(__dirname, 'src/pages/index.html'),
         catalog: resolve(__dirname, 'src/pages/catalog/index.html'),
+        profile: resolve(__dirname, 'src/pages/profile/index.html'),
         'sign-up': resolve(__dirname, 'src/pages/sign-up/index.html'),
         'catalog-second-level': resolve(__dirname, 'src/pages/catalog-second-level/index.html'),
       }

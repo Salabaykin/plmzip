@@ -6,11 +6,27 @@
 }
 
 .form__label {
+  display: inline-block;
+  margin-bottom: 5px;
   font-size: 15px;
   line-height: 19px;
   color: rgb(23 30 38 / 50%);
-  margin-bottom: 5px;
-  display: inline-block;
+}
+
+.form__label.required {
+  position: relative;
+}
+
+.required::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-30%);
+  background: url("./required.svg") center no-repeat;
+  background-size: cover;
 }
 
 .form__input {

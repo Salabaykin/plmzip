@@ -1,0 +1,18 @@
+@import "../global.css";
+@import "../common.css";
+
+/* Index page */
+@import "../../components/search/search.css";
+@import "../../components/header/header.css";
+@import "../../components/list/list.css";
+@import "../../components/main/main.css";
+@import "../../components/float-menu/float-menu.css";
+@import "../../components/slider/slider.css";
+@import "../../components/search-by/search-by.css";
+@import "../../components/advantages/advantages.css";
+@import "../../components/brands/brands.css";
+@import "../../components/accordion/accordion.css";
+
+/* Profile */
+@import "../../components/breadcrumbs/breadcrumbs.css";
+@import "../../components/profile/profile.css";
