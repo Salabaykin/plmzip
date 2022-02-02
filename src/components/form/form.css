@@ -21,12 +21,20 @@
   content: "";
   position: absolute;
   top: 50%;
-  right: -15px;
-  width: 10px;
-  height: 10px;
+  right: -10px;
+  width: 7px;
+  height: 7px;
   transform: translateY(-30%);
   background: url("./required.svg") center no-repeat;
   background-size: cover;
+}
+
+@media (min-width: 1280px) {
+  .required::after {
+    right: -15px;
+    width: 10px;
+    height: 10px;
+  }
 }
 
 .form__input {

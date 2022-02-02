@@ -37,7 +37,9 @@ export class Accordion {
     return this.accordionContentElement.classList.contains(this.accordionContentIsVisibleClassName);
   }
 
-  toggle() {
+  toggle(event: { target: any }) {
+    const { target } = event;
+    if (target.classList.contains('user-orders__pay')) return;
     if (this.isOpened()) {
       this.close();
     } else {
