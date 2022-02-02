@@ -1,4 +1,4 @@
-import './catalog.css';
+import './profile.css';
 
 import { Dropdown } from '../../components/dropdown/Dropdown';
 import { Popup } from '../../components/popup/Popup';
@@ -94,3 +94,34 @@ if (footerElement) {
   const footer = new Footer(footerElement);
   footer.setEventListeners();
 }
+
+/* Amount */
+const basketAmount = document.querySelectorAll('.amount');
+basketAmount.forEach((item) => {
+  const input = item.querySelector('.amount__input');
+  // @ts-ignore
+  input.value = 1;
+  item.addEventListener('click', (event) => {
+    const { target } = event;
+    // @ts-ignore
+    let count = input.value;
+    // @ts-ignore
+    if (target.closest('.amount__btn-plus')) {
+      if (count < 999) {
+        // eslint-disable-next-line no-plusplus
+        count++;
+      }
+    } else {
+      // @ts-ignore
+      // eslint-disable-next-line no-lonely-if
+      if (target.closest('.amount__btn-minus')) {
+        if (count !== '0') {
+          // eslint-disable-next-line no-plusplus
+          count--;
+        }
+      }
+    }
+    // @ts-ignore
+    input.value = count;
+  });
+});

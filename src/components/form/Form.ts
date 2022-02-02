@@ -6,6 +6,7 @@ interface Mask {
   placeholder?: string
 }
 
+// @ts-ignore
 const checkValue = (input, inputMask) => {
   const { value } = input;
   const isValid = Inputmask.isValid(value, { mask: inputMask });
@@ -28,10 +29,9 @@ export const mask = ({
   inputMask,
   placeholder = '',
 }: Mask) => {
-  const element = document.querySelector(selector);
+  const element: HTMLElement | null = document.querySelector(selector);
 
   if (element) {
-    // @ts-ignore
     Inputmask({
       mask: inputMask,
       showMaskOnHover: false,
