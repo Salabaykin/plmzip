@@ -275,9 +275,112 @@
   color: #fff;
 }
 
-.card-dropdown .dropdown__content {
-  top: calc(-100% - 60px);
-  right: 0;
+.tippy-box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  border: 9px solid transparent;
+  border-top-color: #fff;
+  margin-right: -1px;
+  z-index: 1000;
+}
+
+.tippy-box[data-theme~="popup"] {
+  position: relative;
   background: #fff;
   border-radius: 10px;
+  padding: 20px;
+  color: var(--color-black);
+  box-shadow: 5px 5px 20px rgb(23 30 38 / 30%);
+}
+
+.card-dropdown .dropdown__content {
+  top: 0;
+  left: 0;
+  transform: translate(0, -415px);
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 320px;
+}
+
+.card-dropdown .dropdown__content::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  border: 9px solid transparent;
+  border-top-color: #fff;
+  margin-right: -1px;
+  z-index: 1000;
+}
+
+.card-dropdown__head {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(0 113 188 / 10%);
+}
+
+.card-dropdown__title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  color: var(--color-black);
+}
+
+.card-dropdown__close {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-80%);
+  background: transparent url("../sale/close.svg") 50% no-repeat;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+.card-dropdown__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-dropdown__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(0 113 188 / 10%);
+}
+
+.card-dropdown__descr {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.card-dropdown__city {
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--color-black);
+}
+
+.card-dropdown__count {
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--color-black);
+  opacity: 0.5;
+}
+
+.card-dropdown__button {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  line-height: 26px;
+  background-color: var(--color-danger);
 }

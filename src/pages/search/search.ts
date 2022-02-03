@@ -9,6 +9,15 @@ import { Brands } from '../../components/brands/Brands';
 import { Footer } from '../../components/footer/Footer';
 import { Choice } from '../../components/search/Choice';
 import { formQuantity } from '../../components/quantity/Quantity';
+import { tooltip } from '../../components/tooltip/Tooltip';
+
+tooltip({
+  placement: 'top-end',
+  theme: 'popup',
+  trigger: 'click',
+  interactive: true,
+  arrow: false,
+});
 
 /* Quantity */
 formQuantity();
