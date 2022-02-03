@@ -10,13 +10,36 @@ import { Footer } from '../../components/footer/Footer';
 import { Choice } from '../../components/search/Choice';
 import { formQuantity } from '../../components/quantity/Quantity';
 import { tooltip } from '../../components/tooltip/Tooltip';
+import { Toggler } from '../../components/toggler/Toggler';
 
-tooltip({
-  placement: 'top-end',
-  theme: 'popup',
-  trigger: 'click',
-  interactive: true,
-  arrow: false,
+/* Toggler */
+const toggler = document.querySelectorAll('[data-toggler]');
+Toggler(toggler, 'active');
+
+/* Card Popup */
+const tooltipList = document.querySelectorAll('[data-card-popup]');
+tooltipList.forEach((card: Element) => {
+  const id = card.getAttribute('data-card-id');
+  const popupList = document.querySelectorAll('[data-popup-id]');
+  let template;
+  for (let i = 0; i < popupList.length; i++) {
+    const popup = (popupList[i] as HTMLElement);
+    const { popupId } = popup.dataset;
+    if (popupId === id) {
+      template = popupList[i];
+      break;
+    }
+  }
+  if (template) {
+    tooltip(card, {
+      content: template.innerHTML,
+      placement: 'top',
+      theme: 'popup',
+      trigger: 'click',
+      interactive: true,
+      allowHTML: true,
+    });
+  }
 });
 
 /* Quantity */
@@ -24,15 +47,8 @@ formQuantity();
 
 /* Logged in Dropdown */
 const dropdownsList = document.querySelectorAll('.js-dropdown');
-const cardDropdownList = document.querySelectorAll('.card-dropdown');
 if (dropdownsList.length) {
   dropdownsList.forEach((dropdownElement) => {
-    const dropdown = new Dropdown(dropdownElement);
-    dropdown.setEventListeners();
-  });
-}
-if (cardDropdownList.length) {
-  cardDropdownList.forEach((dropdownElement) => {
     const dropdown = new Dropdown(dropdownElement);
     dropdown.setEventListeners();
   });

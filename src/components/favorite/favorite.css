@@ -1,0 +1,31 @@
+.favorite {
+  position: relative;
+  z-index: 10;
+  display: block;
+  border: none;
+  font-size: 0;
+  width: 18px;
+  height: 18px;
+  background: transparent url("./favorite.svg") 50% no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.favorite.active {
+  background: transparent url("./favorite-active.svg") 50% no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .favorite {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .favorite {
+    width: 25px;
+    height: 25px;
+  }
+}

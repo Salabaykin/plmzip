@@ -19,3 +19,5 @@
 @import "../components/cards/cards.css";
 @import "../components/tags/tags.css";
 @import "../components/quantity/quantity.css";
+@import "../components/pagination/pagination.css";
+@import "../components/favorite/favorite.css";

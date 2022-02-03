@@ -9,14 +9,14 @@ export function formQuantity() {
         const input = quantity.querySelector('input');
         const dataMaxCount: number = Number(input?.dataset.maxcount);
         let value: number = Number(input?.value);
-        if (input && value) {
+        if (input && value >= 0) {
           if (isPlus) {
             // eslint-disable-next-line no-plusplus
             if (value < dataMaxCount) value++;
           } else {
             // eslint-disable-next-line no-plusplus
             --value;
-            if (value < 1) value = 1;
+            if (value <= 0) value = 0;
           }
           input.value = String(value);
         }

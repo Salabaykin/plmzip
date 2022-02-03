@@ -8,7 +8,17 @@ import { Visibility } from '../../components/visibility/Visibility';
 import { Brands } from '../../components/brands/Brands';
 import { Footer } from '../../components/footer/Footer';
 import { formViewPass } from '../../components/form/Form';
+import { formQuantity } from '../../components/quantity/Quantity';
+import { Toggler } from '../../components/toggler/Toggler';
 
+/* Quantity */
+formQuantity();
+
+/* Toggler */
+const toggler = document.querySelectorAll('[data-toggler]');
+Toggler(toggler, 'active');
+
+/* View Password */
 formViewPass();
 
 /* Logged in Dropdown */
