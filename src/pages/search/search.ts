@@ -3,17 +3,27 @@ import './search.css';
 import { Dropdown } from '../../components/dropdown/Dropdown';
 import { Popup } from '../../components/popup/Popup';
 import { Drawer } from '../../components/drawer/Drawer';
-import { PasswordType } from '../../components/form/Form';
 import { Accordion } from '../../components/accordion/Accordion';
 import { Visibility } from '../../components/visibility/Visibility';
 import { Brands } from '../../components/brands/Brands';
 import { Footer } from '../../components/footer/Footer';
 import { Choice } from '../../components/search/Choice';
+import { formQuantity } from '../../components/quantity/Quantity';
+
+/* Quantity */
+formQuantity();
 
 /* Logged in Dropdown */
 const dropdownsList = document.querySelectorAll('.js-dropdown');
+const cardDropdownList = document.querySelectorAll('.card-dropdown');
 if (dropdownsList.length) {
   dropdownsList.forEach((dropdownElement) => {
+    const dropdown = new Dropdown(dropdownElement);
+    dropdown.setEventListeners();
+  });
+}
+if (cardDropdownList.length) {
+  cardDropdownList.forEach((dropdownElement) => {
     const dropdown = new Dropdown(dropdownElement);
     dropdown.setEventListeners();
   });
@@ -60,10 +70,6 @@ if (showMoreButtonElement) {
 
 const showDrawerElement = document.querySelector('.header__menu-button')!;
 showDrawerElement.addEventListener('click', drawer.show);
-
-/* Password type toggle */
-const passwordType = new PasswordType();
-passwordType.setEventListeners();
 
 /* Menu Accordion */
 const accordionsList = document.querySelectorAll('.js-accordion-item');

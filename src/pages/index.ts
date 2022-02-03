@@ -4,11 +4,14 @@ import { Dropdown } from '../components/dropdown/Dropdown';
 import { slider } from '../components/slider/Slider';
 import { Popup } from '../components/popup/Popup';
 import { Drawer } from '../components/drawer/Drawer';
-import { PasswordType } from '../components/form/Form';
 import { Accordion } from '../components/accordion/Accordion';
 import { Visibility } from '../components/visibility/Visibility';
 import { Brands } from '../components/brands/Brands';
 import { Footer } from '../components/footer/Footer';
+import { formViewPass } from '../components/form/Form';
+
+/* Quantity */
+formViewPass();
 
 /* Slider */
 const sliders = document.querySelectorAll('.slider');
@@ -68,10 +71,6 @@ if (showMoreButtonElement) {
 
 const showDrawerElement = document.querySelector('.header__menu-button')!;
 showDrawerElement.addEventListener('click', drawer.show);
-
-/* Password type toggle */
-const passwordType = new PasswordType();
-passwordType.setEventListeners();
 
 /* Menu Accordion */
 const accordionsList = document.querySelectorAll('.js-accordion-item');

@@ -1,0 +1,49 @@
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity__button {
+  padding: 12px;
+  border: 2px solid var(--color-light);
+  border-radius: 5px;
+  background-color: transparent;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.quantity__button_plus {
+  background: transparent url("./plus.svg") 50% no-repeat;
+}
+
+.quantity__button_minus {
+  background: transparent url("./minus.svg") 50% no-repeat;
+}
+
+.quantity__input input {
+  max-width: 55px;
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  margin: 0 5px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #222;
+}
+
+@media (min-width: 1280px) {
+  .quantity__button {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .quantity__input input {
+    max-width: 70px;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

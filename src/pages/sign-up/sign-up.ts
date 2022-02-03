@@ -1,16 +1,15 @@
 import './sign-up.css';
 
 import { tooltip } from '../../components/tooltip/Tooltip';
-import { mask, PasswordType } from '../../components/form/Form';
-
-/* Password type toggle */
-const passwordType = new PasswordType();
-passwordType.setEventListeners();
+import { mask, formViewPass } from '../../components/form/Form';
 
 tooltip({
   placement: 'top-end',
   theme: 'light',
 });
+
+/* Quantity */
+formViewPass();
 
 const phoneMaskOptions = {
   selector: '#phone',

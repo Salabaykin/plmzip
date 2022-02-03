@@ -65,10 +65,10 @@
   padding: 0;
   border: none;
   transition: opacity 0.2s;
+  cursor: pointer;
 }
 
-.form__toggle-password:hover {
-  cursor: pointer;
+.form__toggle-password.active {
   opacity: 0.5;
 }
 

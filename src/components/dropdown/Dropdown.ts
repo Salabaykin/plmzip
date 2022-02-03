@@ -72,14 +72,14 @@ export class Dropdown {
   }
 
   open() {
-    this.dropdownTriggerIconElement.classList.add(`${this.dropdownTriggerIconClassName}_is_rotated`);
+    this.dropdownTriggerIconElement?.classList.add(`${this.dropdownTriggerIconClassName}_is_rotated`);
     this.dropdownContentElement.classList.add(this.dropdownContentIsVisibleClassName);
 
     document.addEventListener('click', this.documentClickHandler);
   }
 
   close() {
-    this.dropdownTriggerIconElement.classList.remove(`${this.dropdownTriggerIconClassName}_is_rotated`);
+    this.dropdownTriggerIconElement?.classList.remove(`${this.dropdownTriggerIconClassName}_is_rotated`);
     this.dropdownContentElement.classList.remove(this.dropdownContentIsVisibleClassName);
 
     document.removeEventListener('click', this.documentClickHandler);

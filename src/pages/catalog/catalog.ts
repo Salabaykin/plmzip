@@ -3,7 +3,6 @@ import './catalog.css';
 import { Dropdown } from '../../components/dropdown/Dropdown';
 import { Popup } from '../../components/popup/Popup';
 import { Drawer } from '../../components/drawer/Drawer';
-import { PasswordType } from '../../components/form/Form';
 import { Accordion } from '../../components/accordion/Accordion';
 import { Visibility } from '../../components/visibility/Visibility';
 import { Brands } from '../../components/brands/Brands';
@@ -59,10 +58,6 @@ if (showMoreButtonElement) {
 
 const showDrawerElement = document.querySelector('.header__menu-button')!;
 showDrawerElement.addEventListener('click', drawer.show);
-
-/* Password type toggle */
-const passwordType = new PasswordType();
-passwordType.setEventListeners();
 
 /* Menu Accordion */
 const accordionsList = document.querySelectorAll('.js-accordion-item');

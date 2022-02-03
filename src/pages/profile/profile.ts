@@ -3,11 +3,13 @@ import './profile.css';
 import { Dropdown } from '../../components/dropdown/Dropdown';
 import { Popup } from '../../components/popup/Popup';
 import { Drawer } from '../../components/drawer/Drawer';
-import { PasswordType } from '../../components/form/Form';
 import { Accordion } from '../../components/accordion/Accordion';
 import { Visibility } from '../../components/visibility/Visibility';
 import { Brands } from '../../components/brands/Brands';
 import { Footer } from '../../components/footer/Footer';
+import { formViewPass } from '../../components/form/Form';
+
+formViewPass();
 
 /* Logged in Dropdown */
 const dropdownsList = document.querySelectorAll('.js-dropdown');
@@ -60,10 +62,6 @@ if (showMoreButtonElement) {
 const showDrawerElement = document.querySelector('.header__menu-button')!;
 showDrawerElement.addEventListener('click', drawer.show);
 
-/* Password type toggle */
-const passwordType = new PasswordType();
-passwordType.setEventListeners();
-
 /* Menu Accordion */
 const accordionsList = document.querySelectorAll('.js-accordion-item');
 accordionsList.forEach((accordionElement) => {
@@ -94,34 +92,3 @@ if (footerElement) {
   const footer = new Footer(footerElement);
   footer.setEventListeners();
 }
-
-/* Amount */
-const basketAmount = document.querySelectorAll('.amount');
-basketAmount.forEach((item) => {
-  const input = item.querySelector('.amount__input');
-  // @ts-ignore
-  input.value = 1;
-  item.addEventListener('click', (event) => {
-    const { target } = event;
-    // @ts-ignore
-    let count = input.value;
-    // @ts-ignore
-    if (target.closest('.amount__btn-plus')) {
-      if (count < 999) {
-        // eslint-disable-next-line no-plusplus
-        count++;
-      }
-    } else {
-      // @ts-ignore
-      // eslint-disable-next-line no-lonely-if
-      if (target.closest('.amount__btn-minus')) {
-        if (count !== '0') {
-          // eslint-disable-next-line no-plusplus
-          count--;
-        }
-      }
-    }
-    // @ts-ignore
-    input.value = count;
-  });
-});

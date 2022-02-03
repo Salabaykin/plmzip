@@ -13,7 +13,7 @@
   <div class="sign-up">
 
     <!-- Surname -->
-    <div style="display: block" class="sign-up__content">
+    <div style="display: none" class="sign-up__content">
       <a href="#" class="sign-up__back">Назад</a>
       <div class="sign-up__logo">
         <img src="/logo.svg" alt="Логотип PLMZIP">
@@ -161,7 +161,7 @@
     </div>
 
     <!-- Password -->
-    <div style="display: none" class="sign-up__content">
+    <div style="display: block" class="sign-up__content">
       <a href="#" class="sign-up__back">Назад</a>
       <div class="sign-up__logo">
         <img src="/logo.svg" alt="Логотип PLMZIP">
@@ -182,9 +182,7 @@
               minlength="6"
               required
             >
-            <button class="form__toggle-password" type="button"
-                    aria-label="Показать пароль как простой текст. Предупреждение: это покажет ваш пароль на экране.">
-            </button>
+            <button class="form__toggle-password" type="button"></button>
             <span class="error-info" data-tippy-content="Подтвердите пароль!"></span>
           </div>
         </section>

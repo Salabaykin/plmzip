@@ -266,3 +266,18 @@
     line-height: 26px;
   }
 }
+
+.card-dropdown .dropdown__trigger {
+  justify-content: center;
+}
+
+.card-dropdown .dropdown__trigger:hover {
+  color: #fff;
+}
+
+.card-dropdown .dropdown__content {
+  top: calc(-100% - 60px);
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+}
