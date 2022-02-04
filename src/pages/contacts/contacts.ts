@@ -12,6 +12,21 @@ import { formQuantity } from '../../components/quantity/Quantity';
 import { tooltip } from '../../components/tooltip/Tooltip';
 import { Toggler } from '../../components/toggler/Toggler';
 
+const copyValue = () => {
+  const fields = document.querySelectorAll('[data-copy]');
+  if (fields.length) {
+    fields.forEach((item: Element) => {
+      const input: HTMLInputElement | null = item.querySelector('input[type="text"]');
+
+      input?.addEventListener('click', () => {
+        navigator.clipboard.writeText(input.value);
+      });
+    });
+  }
+};
+
+copyValue();
+
 /* Toggler */
 const toggler = document.querySelectorAll('[data-toggler]');
 Toggler(toggler, 'active');
