@@ -13,6 +13,6 @@
 @import "../../components/brands/brands.css";
 @import "../../components/accordion/accordion.css";
 
-/* Search page */
+/* Basket */
 @import "../../components/breadcrumbs/breadcrumbs.css";
-@import "../../components/search/search-page.css";
+@import "../../components/basket/basket.css";

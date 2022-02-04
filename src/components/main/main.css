@@ -6,7 +6,8 @@
   margin: 0 auto;
 }
 
-.main__title {
+.main__title,
+.main__sub-title {
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 20px;
@@ -35,7 +36,8 @@
 }
 
 @media (min-width: 768px) {
-  .main__title {
+  .main__title,
+  .main__sub-title {
     font-size: 30px;
     line-height: 38px;
   }
@@ -50,7 +52,8 @@
 }
 
 @media (min-width: 1280px) {
-  .main__title {
+  .main__title,
+  .main__sub-title {
     font-size: 60px;
     line-height: 77px;
     margin-bottom: 20px;

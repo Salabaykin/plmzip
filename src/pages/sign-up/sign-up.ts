@@ -3,7 +3,7 @@ import './sign-up.css';
 import { tooltip } from '../../components/tooltip/Tooltip';
 import { mask, formViewPass } from '../../components/form/Form';
 
-tooltip({
+tooltip('[data-tippy-content]', {
   placement: 'top-end',
   theme: 'light',
 });
