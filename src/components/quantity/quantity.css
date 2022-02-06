@@ -35,12 +35,13 @@
 
 @media (min-width: 1280px) {
   .quantity__button {
-    padding: 18px;
+    width: 55px;
+    height: 55px;
     border-radius: 10px;
   }
 
   .quantity__input input {
-    max-width: 70px;
+    max-width: 60px;
     padding: 10px;
     margin: 0 10px;
     font-size: 20px;

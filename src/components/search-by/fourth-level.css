@@ -1,0 +1,130 @@
+.selected-parameters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.selected-parameters__item {
+  position: relative;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--color-black);
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .selected-parameters {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .selected-parameters__item {
+    font-size: 15px;
+    line-height: 19px;
+    padding: 0 25px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .selected-parameters {
+    margin: 0 0 30px;
+  }
+
+  .selected-parameters__item {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+.selected-parameters__item::before {
+  content: "•";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .selected-parameters__item::before {
+    left: -8px;
+  }
+
+  .selected-parameters__item:first-child::before {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .selected-parameters__item::before {
+    left: -15px;
+  }
+}
+
+.fourth-level .scheme-category__list {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .fourth-level .scheme-category__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.fourth-level .scheme-category__link {
+  padding: 10px;
+  height: 100%;
+}
+
+@media (min-width: 1280px) {
+  .fourth-level .scheme-category__link {
+    padding: 30px;
+  }
+}
+
+.fourth-level .scheme-category__text {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+@media (min-width: 1280px) {
+  .fourth-level .scheme-category__text {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: normal;
+  }
+}
+
+.fourth-level .scheme-category__link:hover .scheme-category__text {
+  color: var(--color-primary);
+}
+
+.fourth-level .scheme-category__preview {
+  display: block;
+  height: 0;
+  padding-bottom: 150%;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .fourth-level .scheme-category__preview {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .fourth-level .scheme-category__preview {
+    margin-bottom: 40px;
+  }
+}
+
+.fourth-level .scheme-category__preview img {
+  width: 100%;
+  object-fit: contain;
+}

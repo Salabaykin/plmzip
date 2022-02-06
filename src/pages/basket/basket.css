@@ -12,7 +12,10 @@
 @import "../../components/advantages/advantages.css";
 @import "../../components/brands/brands.css";
 @import "../../components/accordion/accordion.css";
+@import "../../components/page/page.css";
 
 /* Basket */
 @import "../../components/breadcrumbs/breadcrumbs.css";
+@import "../../components/profile/orders.css";
 @import "../../components/basket/basket.css";
+@import "../../components/basket/order-details.css";

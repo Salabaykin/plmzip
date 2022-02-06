@@ -235,11 +235,13 @@
 
                 <li class="basket__left-block">
                   <div class="basket__params">
-                    <div class="checkbox">
+                    <div class="checkbox-2">
                       <input type="checkbox" name="select-all" id="select-all">
                       <label for="select-all">Выделить все товары</label>
                     </div>
-                    <button type="button" class="basket__delete-selected-button">Удалить выделенные товары</button>
+                    <div>
+                      <a href="#" class="basket__delete-selected-button">Удалить выделенные товары</a>
+                    </div>
                   </div>
                   <div class="basket__warning">
                     <div class="basket__warning-block">
@@ -247,7 +249,271 @@
                     </div>
                   </div>
                   <div class="basket__orders">
-                    orders
+                    <div class="orders-head">
+                      <ul class="orders__wrapper">
+                        <li class="orders-head__item orders__checked"></li>
+                        <li class="orders-head__item orders__preview"></li>
+                        <li class="orders-head__item orders__descr">Наименование</li>
+                        <li class="orders-head__item orders__price">Цена</li>
+                        <li class="orders-head__item orders__count">Кол-во</li>
+                        <li class="orders-head__item orders__like"></li>
+                        <li class="orders-head__item orders__delete"></li>
+                      </ul>
+                    </div>
+
+                    <ul class="orders__list">
+
+                      <li class="orders__item">
+                        <ul class="orders__wrapper">
+                          <li class="orders__checked">
+                            <div class="checkbox-2">
+                              <input type="checkbox" name="select-all" id="checkbox-1">
+                              <label for="checkbox-1">&nbsp;</label>
+                            </div>
+                          </li>
+                          <li class="orders__preview">
+                            <a class="orders__link" href="#">
+                              <img class="orders__image" src="/content/orders/order.jpg" alt="Трос румпеля Suzuki DT40">
+                            </a>
+                          </li>
+                          <li class="orders__descr">
+                            <a class="orders__link" href="#">
+                              Трос румпеля Suzuki DT40 (Osaka)
+                            </a>
+                            <p class="orders__article">
+                              арт:63610-94402-TW
+                            </p>
+                            <div class="orders__info">
+                              <span class="orders__per-price">490 ₽</span>
+                              <span class="tag-sale">-70%</span>
+                              <span class="tag-new">новинка</span>
+                            </div>
+                          </li>
+                          <li class="orders__price">
+                            1 960 ₽
+                            <span class="orders__old-price">
+                              2 150 ₽
+                            </span>
+                          </li>
+                          <li class="orders__count">
+                            <div class="quantity">
+                              <button type="button" class="quantity__button quantity__button_minus"></button>
+                              <div class="quantity__input">
+                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="1">
+                              </div>
+                              <button type="button" class="quantity__button quantity__button_plus"></button>
+                            </div>
+                          </li>
+                          <li class="orders__like">
+                            <button type="button" class="favorite" data-toggler></button>
+                          </li>
+                          <li class="orders__delete">
+                            <button type="button" class="orders__delete-button"></button>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="orders__item">
+                        <ul class="orders__wrapper">
+                          <li class="orders__checked">
+                            <div class="checkbox-2">
+                              <input type="checkbox" name="select-all" id="checkbox-2">
+                              <label for="checkbox-2">&nbsp;</label>
+                            </div>
+                          </li>
+                          <li class="orders__preview">
+                            <a class="orders__link" href="#">
+                              <img class="orders__image" src="/content/orders/order.jpg" alt="Трос румпеля Suzuki DT40">
+                            </a>
+                          </li>
+                          <li class="orders__descr">
+                            <a class="orders__link" href="#">
+                              Трос румпеля Suzuki DT40 (Osaka)
+                            </a>
+                            <p class="orders__article">
+                              арт:63610-94402-TW
+                            </p>
+                            <div class="orders__info">
+                              <span class="orders__per-price">490 ₽</span>
+                              <span class="tag-sale">-70%</span>
+                              <span class="tag-new">новинка</span>
+                            </div>
+                          </li>
+                          <li class="orders__price">
+                            1 960 ₽
+                            <span class="orders__old-price">
+                              2 150 ₽
+                            </span>
+                          </li>
+                          <li class="orders__count">
+                            <div class="quantity">
+                              <button type="button" class="quantity__button quantity__button_minus"></button>
+                              <div class="quantity__input">
+                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="1">
+                              </div>
+                              <button type="button" class="quantity__button quantity__button_plus"></button>
+                            </div>
+                          </li>
+                          <li class="orders__like">
+                            <button type="button" class="favorite" data-toggler></button>
+                          </li>
+                          <li class="orders__delete">
+                            <button type="button" class="orders__delete-button"></button>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="orders__item">
+                        <ul class="orders__wrapper">
+                          <li class="orders__checked">
+                            <div class="checkbox-2">
+                              <input type="checkbox" name="select-all" id="checkbox-3">
+                              <label for="checkbox-3">&nbsp;</label>
+                            </div>
+                          </li>
+                          <li class="orders__preview">
+                            <a class="orders__link" href="#">
+                              <img class="orders__image" src="/content/orders/order.jpg" alt="Трос румпеля Suzuki DT40">
+                            </a>
+                          </li>
+                          <li class="orders__descr">
+                            <a class="orders__link" href="#">
+                              Трос румпеля Suzuki DT40 (Osaka)
+                            </a>
+                            <p class="orders__article">
+                              арт:63610-94402-TW
+                            </p>
+                            <div class="orders__info">
+                              <span class="orders__per-price">490 ₽</span>
+                              <span class="tag-sale">-70%</span>
+                              <span class="tag-new">новинка</span>
+                            </div>
+                          </li>
+                          <li class="orders__price">
+                            1 960 ₽
+                            <span class="orders__old-price">
+                              2 150 ₽
+                            </span>
+                          </li>
+                          <li class="orders__count">
+                            <div class="quantity">
+                              <button type="button" class="quantity__button quantity__button_minus"></button>
+                              <div class="quantity__input">
+                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="1">
+                              </div>
+                              <button type="button" class="quantity__button quantity__button_plus"></button>
+                            </div>
+                          </li>
+                          <li class="orders__like">
+                            <button type="button" class="favorite" data-toggler></button>
+                          </li>
+                          <li class="orders__delete">
+                            <button type="button" class="orders__delete-button"></button>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="orders__item">
+                        <ul class="orders__wrapper">
+                          <li class="orders__checked">
+                            <div class="checkbox-2">
+                              <input type="checkbox" name="select-all" id="checkbox-4">
+                              <label for="checkbox-4">&nbsp;</label>
+                            </div>
+                          </li>
+                          <li class="orders__preview">
+                            <a class="orders__link" href="#">
+                              <img class="orders__image" src="/content/orders/order.jpg" alt="Трос румпеля Suzuki DT40">
+                            </a>
+                          </li>
+                          <li class="orders__descr">
+                            <a class="orders__link" href="#">
+                              Трос румпеля Suzuki DT40 (Osaka)
+                            </a>
+                            <p class="orders__article">
+                              арт:63610-94402-TW
+                            </p>
+                            <div class="orders__info">
+                              <span class="orders__per-price">490 ₽</span>
+                              <span class="tag-sale">-70%</span>
+                              <span class="tag-new">новинка</span>
+                            </div>
+                          </li>
+                          <li class="orders__price">
+                            1 960 ₽
+                            <span class="orders__old-price">
+                              2 150 ₽
+                            </span>
+                          </li>
+                          <li class="orders__count">
+                            <div class="quantity">
+                              <button type="button" class="quantity__button quantity__button_minus"></button>
+                              <div class="quantity__input">
+                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="1">
+                              </div>
+                              <button type="button" class="quantity__button quantity__button_plus"></button>
+                            </div>
+                          </li>
+                          <li class="orders__like">
+                            <button type="button" class="favorite" data-toggler></button>
+                          </li>
+                          <li class="orders__delete">
+                            <button type="button" class="orders__delete-button"></button>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="orders__item">
+                        <ul class="orders__wrapper">
+                          <li class="orders__checked">
+                            <div class="checkbox-2">
+                              <input type="checkbox" name="select-all" id="checkbox-5">
+                              <label for="checkbox-5">&nbsp;</label>
+                            </div>
+                          </li>
+                          <li class="orders__preview">
+                            <a class="orders__link" href="#">
+                              <img class="orders__image" src="/content/orders/order.jpg" alt="Трос румпеля Suzuki DT40">
+                            </a>
+                          </li>
+                          <li class="orders__descr">
+                            <a class="orders__link" href="#">
+                              Трос румпеля Suzuki DT40 (Osaka)
+                            </a>
+                            <p class="orders__article">
+                              арт:63610-94402-TW
+                            </p>
+                            <div class="orders__info">
+                              <span class="orders__per-price">490 ₽</span>
+                              <span class="tag-sale">-70%</span>
+                              <span class="tag-new">новинка</span>
+                            </div>
+                          </li>
+                          <li class="orders__price">
+                            1 960 ₽
+                            <span class="orders__old-price">
+                              2 150 ₽
+                            </span>
+                          </li>
+                          <li class="orders__count">
+                            <div class="quantity">
+                              <button type="button" class="quantity__button quantity__button_minus"></button>
+                              <div class="quantity__input">
+                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="1">
+                              </div>
+                              <button type="button" class="quantity__button quantity__button_plus"></button>
+                            </div>
+                          </li>
+                          <li class="orders__like">
+                            <button type="button" class="favorite" data-toggler></button>
+                          </li>
+                          <li class="orders__delete">
+                            <button type="button" class="orders__delete-button"></button>
+                          </li>
+                        </ul>
+                      </li>
+
+                    </ul>
                   </div>
                 </li>
 

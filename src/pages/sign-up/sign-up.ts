@@ -2,6 +2,15 @@ import './sign-up.css';
 
 import { tooltip } from '../../components/tooltip/Tooltip';
 import { mask, formViewPass } from '../../components/form/Form';
+import { Slider } from '../../components/slider/Slider';
+
+/* Sign Up Slider */
+Slider('.sign-up-slider', {
+  speed: 0,
+  spaceBetween: 30,
+  autoHeight: true,
+  allowTouchMove: false,
+});
 
 tooltip('[data-tippy-content]', {
   placement: 'top-end',

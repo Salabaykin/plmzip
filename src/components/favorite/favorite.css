@@ -1,6 +1,6 @@
 .favorite {
   position: relative;
-  z-index: 10;
+  z-index: 4;
   display: block;
   border: none;
   font-size: 0;

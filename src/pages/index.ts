@@ -1,7 +1,7 @@
 import './index.css';
 
 import { Dropdown } from '../components/dropdown/Dropdown';
-import { slider } from '../components/slider/Slider';
+import { Slider } from '../components/slider/Slider';
 import { Popup } from '../components/popup/Popup';
 import { Drawer } from '../components/drawer/Drawer';
 import { Accordion } from '../components/accordion/Accordion';
@@ -13,13 +13,23 @@ import { formViewPass } from '../components/form/Form';
 /* Quantity */
 formViewPass();
 
-/* Slider */
-const sliders = document.querySelectorAll('.slider');
-if (sliders.length) {
-  sliders.forEach(() => {
-    slider({ selector: '.slider', paginationSelector: '.swiper-pagination' });
-  });
-}
+/* Main Slider */
+Slider('.slider', {
+  spaceBetween: 10,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+
+/* Gallery Slider */
+Slider('.gallery-slider', {
+  spaceBetween: 10,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
 
 /* Logged in Dropdown */
 const dropdownsList = document.querySelectorAll('.js-dropdown');

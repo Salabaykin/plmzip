@@ -1,4 +1,12 @@
-.basket {}
+.basket-nav .page-nav__link {
+  background-color: var(--color-light);
+  color: rgb(23 30 38 / 50%);
+}
+
+.basket-nav .swiper-slide-thumb-active .page-nav__link {
+  background-color: var(--color-primary);
+  color: #fff;
+}
 
 .basket__wrapper {
   display: grid;
@@ -23,23 +31,21 @@
   }
 }
 
-.basket__left-block {}
-
 .basket__params {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 16px;
 }
 
 .basket__delete-selected-button {
-  padding: 0;
   margin: 0 0 0 15px;
   background: transparent;
   font-size: 11px;
-  line-height: 0.8;
-  border: none;
+  font-weight: normal;
+  color: var(--color-danger);
+  text-decoration: none;
   border-bottom: 1px solid var(--color-danger);
-  cursor: pointer;
 }
 
 @media (min-width: 1280px) {
@@ -89,6 +95,8 @@
 
 @media (min-width: 768px) {
   .basket-details {
+    position: sticky;
+    top: 0;
     padding: 16px;
     border: 2px solid var(--color-light);
     border-radius: 10px;

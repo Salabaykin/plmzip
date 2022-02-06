@@ -1,5 +1,6 @@
 import './basket.css';
 
+import { Thumbs } from 'swiper';
 import { Dropdown } from '../../components/dropdown/Dropdown';
 import { Popup } from '../../components/popup/Popup';
 import { Drawer } from '../../components/drawer/Drawer';
@@ -11,6 +12,23 @@ import { Choice } from '../../components/search/Choice';
 import { formQuantity } from '../../components/quantity/Quantity';
 import { tooltip } from '../../components/tooltip/Tooltip';
 import { Toggler } from '../../components/toggler/Toggler';
+import { Slider } from '../../components/slider/Slider';
+
+/* Basket Slider */
+Slider('.basket-slider', {
+  modules: [Thumbs],
+  speed: 0,
+  autoHeight: true,
+  allowTouchMove: false,
+  thumbs: {
+    swiper: {
+      // @ts-ignore
+      el: '.basket-nav',
+      spaceBetween: 30,
+      slidesPerView: 3,
+    },
+  },
+});
 
 /* Toggler */
 const toggler = document.querySelectorAll('[data-toggler]');

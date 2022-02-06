@@ -12,7 +12,10 @@
 @import "../../components/advantages/advantages.css";
 @import "../../components/brands/brands.css";
 @import "../../components/accordion/accordion.css";
+@import "../../components/card-page/card-page.css";
 
 /* Search page */
 @import "../../components/breadcrumbs/breadcrumbs.css";
 @import "../../components/search/search-page.css";
+@import "../../components/search/search-schemes-page.css";
+@import "../../components/scheme-card-page/scheme-card-page.css";

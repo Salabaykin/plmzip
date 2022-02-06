@@ -253,6 +253,17 @@
       "count count count like delete";
   }
 
+  .basket__orders .orders__wrapper {
+    grid-template-columns: 15px 50px repeat(3, 1fr);
+    grid-template-areas:
+      "checked preview descr descr descr price"
+      "checked count count count like delete";
+  }
+
+  .orders__checked {
+    grid-area: checked;
+  }
+
   .orders__preview {
     grid-area: preview;
   }
@@ -279,12 +290,22 @@
 }
 
 @media (min-width: 1280px) {
+  .orders__count {
+    display: flex;
+    justify-content: center;
+  }
+
   .orders__wrapper {
     display: grid;
-    grid-template-columns: minmax(37px, 100px) minmax(300px, 590px) auto minmax(200px, 225px) repeat(2, auto);
+    grid-template-columns: minmax(37px, 100px) minmax(300px, 590px) minmax(70px, 100px) minmax(200px, 225px) minmax(20px, 25px) minmax(20px, 25px);
     gap: 30px;
     align-items: center;
     padding: 0 0 15px;
+  }
+
+  .basket__orders .orders__wrapper {
+    grid-template-columns: minmax(20px, 25px) minmax(37px, 100px) minmax(200px, 590px) minmax(70px, 100px) minmax(100px, 190px) minmax(20px, 25px) minmax(20px, 25px);
+    gap: 20px;
   }
 }
 
@@ -334,6 +355,10 @@
   opacity: 0.5;
 }
 
+.orders__per-price {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .orders__article {
     margin: 0 0 8px;
@@ -350,6 +375,7 @@
   }
 
   .orders__per-price {
+    display: inline-block;
     margin-right: 16px;
     font-size: 20px;
     line-height: 26px;
@@ -433,5 +459,9 @@
     line-height: 26px;
     color: var(--color-black);
     text-align: center;
+  }
+
+  .orders-head__item.orders__descr {
+    text-align: left;
   }
 }

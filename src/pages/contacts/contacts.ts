@@ -16,11 +16,12 @@ const copyValue = () => {
   const fields = document.querySelectorAll('[data-copy]');
   if (fields.length) {
     fields.forEach((item: Element) => {
-      const input: HTMLInputElement | null = item.querySelector('input[type="text"]');
-
-      input?.addEventListener('click', () => {
-        navigator.clipboard.writeText(input.value);
-      });
+      const input = item.parentElement?.querySelector('input');
+      if (input?.value) {
+        item.addEventListener('click', () => {
+          navigator.clipboard.writeText(input.value);
+        });
+      }
     });
   }
 };
