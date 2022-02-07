@@ -19,6 +19,8 @@ module.exports = defineConfig({
         favorites: resolve(__dirname, 'src/pages/favorites/index.html'),
         contacts: resolve(__dirname, 'src/pages/contacts/index.html'),
         basket: resolve(__dirname, 'src/pages/basket/index.html'),
+        payment: resolve(__dirname, 'src/pages/payment/index.html'),
+        about: resolve(__dirname, 'src/pages/about/index.html'),
         'sign-up': resolve(__dirname, 'src/pages/sign-up/index.html'),
         'catalog-second-level': resolve(__dirname, 'src/pages/catalog-second-level/index.html'),
       }
