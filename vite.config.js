@@ -19,6 +19,13 @@ module.exports = defineConfig({
         favorites: resolve(__dirname, 'src/pages/favorites/index.html'),
         contacts: resolve(__dirname, 'src/pages/contacts/index.html'),
         basket: resolve(__dirname, 'src/pages/basket/index.html'),
+        'order-details': resolve(__dirname, 'src/pages/basket/order-details/index.html'),
+        'card-page': resolve(__dirname, 'src/pages/card-page/index.html'),
+        'search-by-scheme': resolve(__dirname, 'src/pages/search/search-by-scheme/index.html'),
+        'search-by-scheme-fifth-level': resolve(__dirname, 'src/pages/search/search-by-scheme/search-by-scheme-fifth-level/index.html'),
+        'search-by-scheme-fourth-level': resolve(__dirname, 'src/pages/search/search-by-scheme/search-by-scheme-fourth-level/index.html'),
+        'search-by-scheme-second-level': resolve(__dirname, 'src/pages/search/search-by-scheme/search-by-scheme-second-level/index.html'),
+        'search-by-scheme-third-level': resolve(__dirname, 'src/pages/search/search-by-scheme/search-by-scheme-third-level/index.html'),
         'sign-up': resolve(__dirname, 'src/pages/sign-up/index.html'),
         'catalog-second-level': resolve(__dirname, 'src/pages/catalog-second-level/index.html'),
       }
