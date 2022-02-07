@@ -1,22 +1,5 @@
 .about {}
 
-.about__sub-title {
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 19px;
-  color: var(--color-black);
-  text-align: center;
-  margin: 0 0 16px;
-}
-
-@media (min-width: 1280px) {
-  .about__sub-title {
-    font-size: 30px;
-    line-height: 38px;
-    margin: 0 0 30px;
-  }
-}
-
 .about__head {
   display: grid;
   grid-template-columns: 1fr;

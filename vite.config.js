@@ -21,6 +21,7 @@ module.exports = defineConfig({
         basket: resolve(__dirname, 'src/pages/basket/index.html'),
         payment: resolve(__dirname, 'src/pages/payment/index.html'),
         about: resolve(__dirname, 'src/pages/about/index.html'),
+        delivery: resolve(__dirname, 'src/pages/delivery/index.html'),
         'order-details': resolve(__dirname, 'src/pages/basket/order-details/index.html'),
         'card-page': resolve(__dirname, 'src/pages/card-page/index.html'),
         'search-by-scheme': resolve(__dirname, 'src/pages/search/search-by-scheme/index.html'),

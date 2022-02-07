@@ -188,6 +188,23 @@
   opacity: 0.85;
 }
 
+.page__sub-title {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 19px;
+  color: var(--color-black);
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+@media (min-width: 1280px) {
+  .page__sub-title {
+    font-size: 30px;
+    line-height: 38px;
+    margin: 0 0 30px;
+  }
+}
+
 .p-list {
   list-style: none;
   margin: 0;
@@ -260,6 +277,7 @@
 .p-list__title--icon {
   display: block;
   width: 50px;
+  min-width: 50px;
   height: 50px;
 }
 
@@ -281,7 +299,7 @@
 }
 
 .p-list__title--icon.payment-3 {
-  background: transparent url("../about/payment-icon-3.svg") 50% no-repeat;
+  background: transparent url("../payment/payment-icon-3.svg") 50% no-repeat;
   background-size: contain;
 }
 
@@ -315,6 +333,26 @@
   background-size: contain;
 }
 
+.p-list__title--icon.delivery-icon-1 {
+  background: transparent url("../delivery/delivery-icon-1.svg") 50% no-repeat;
+  background-size: contain;
+}
+
+.p-list__title--icon.delivery-icon-3 {
+  background: transparent url("../delivery/delivery-icon-3.svg") 50% no-repeat;
+  background-size: contain;
+}
+
+.p-list__title--icon.delivery-icon-4 {
+  background: transparent url("../delivery/delivery-icon-4.svg") 50% no-repeat;
+  background-size: contain;
+}
+
+.p-list__title--icon.delivery-icon-5 {
+  background: transparent url("../delivery/delivery-icon-5.svg") 50% no-repeat;
+  background-size: contain;
+}
+
 .p-list__text span {
   display: none;
 }
@@ -330,11 +368,11 @@
 }
 
 .p-list__descr p {
-  margin: 10px 0 0;
+  margin: 7px 0 0;
   padding: 0;
   font-size: 12px;
   line-height: 20px;
-  font-weight: normal;
+  font-weight: 300;
   color: #8b8f93;
 }
 
@@ -347,9 +385,9 @@
 
 @media (min-width: 1280px) {
   .p-list__descr p {
-    margin: 20px 0 0;
+    margin: 13px 0 0;
     font-size: 20px;
-    line-height: 26px;
+    line-height: 38px;
   }
 }
 

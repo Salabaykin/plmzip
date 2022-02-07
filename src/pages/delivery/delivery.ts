@@ -1,4 +1,4 @@
-import './card-page.css';
+import './delivery.css';
 
 import { Thumbs } from 'swiper';
 import { Dropdown } from '../../components/dropdown/Dropdown';
@@ -8,70 +8,23 @@ import { Accordion } from '../../components/accordion/Accordion';
 import { Visibility } from '../../components/visibility/Visibility';
 import { Brands } from '../../components/brands/Brands';
 import { Footer } from '../../components/footer/Footer';
-import { Choice } from '../../components/search/Choice';
-import { formQuantity } from '../../components/quantity/Quantity';
-import { tooltip } from '../../components/tooltip/Tooltip';
-import { Toggler } from '../../components/toggler/Toggler';
 import { Slider } from '../../components/slider/Slider';
 
-/* Gallery Slider */
-Slider('.card-page-slider', {
+/* Delivery Slider */
+Slider('.delivery-slider', {
   modules: [Thumbs],
-  spaceBetween: 20,
+  speed: 0,
+  autoHeight: true,
+  allowTouchMove: false,
   thumbs: {
     swiper: {
       // @ts-ignore
-      direction: 'vertical',
-      el: '.card-page-thumbs',
-      spaceBetween: 20,
-      slidesPerView: 4,
-      breakpoints: {
-        320: {
-          spaceBetween: 8,
-        },
-        768: {
-          spaceBetween: 10,
-        },
-        1024: {
-          spaceBetween: 20,
-        },
-      },
+      el: '.delivery-thumbs',
+      spaceBetween: 30,
+      slidesPerView: 3,
     },
   },
 });
-
-/* Toggler */
-const toggler = document.querySelectorAll('[data-toggler]');
-Toggler(toggler, 'active');
-
-/* Card Popup */
-const tooltipList = document.querySelectorAll('[data-card-popup]');
-tooltipList.forEach((card: Element) => {
-  const id = card.getAttribute('data-card-id');
-  const popupList = document.querySelectorAll('[data-popup-id]');
-  let template;
-  for (let i = 0; i < popupList.length; i++) {
-    const popup = (popupList[i] as HTMLElement);
-    const { popupId } = popup.dataset;
-    if (popupId === id) {
-      template = popupList[i];
-      break;
-    }
-  }
-  if (template) {
-    tooltip(card, {
-      content: template.innerHTML,
-      placement: 'top',
-      theme: 'popup',
-      trigger: 'click',
-      interactive: true,
-      allowHTML: true,
-    });
-  }
-});
-
-/* Quantity */
-formQuantity();
 
 /* Logged in Dropdown */
 const dropdownsList = document.querySelectorAll('.js-dropdown');
@@ -154,16 +107,3 @@ if (footerElement) {
   const footer = new Footer(footerElement);
   footer.setEventListeners();
 }
-
-/* Custom Select */
-const searchSelectParams = document.querySelectorAll('.search-param');
-searchSelectParams.forEach((select: Element) => {
-  Choice(select, {
-    allowHTML: true,
-    searchEnabled: false,
-    itemSelectText: '',
-    classNames: {
-      button: 'filter__arrow',
-    },
-  });
-});

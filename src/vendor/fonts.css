@@ -8,6 +8,13 @@
 @font-face {
   font-family: "Futura PT";
   font-style: normal;
+  font-weight: 300;
+  src: url("../vendor/fonts/FuturaPTLight.otf") format("woff2");
+}
+
+@font-face {
+  font-family: "Futura PT";
+  font-style: normal;
   font-weight: 500;
   src: url("../vendor/fonts/FuturaPTMedium.otf") format("woff2");
 }
