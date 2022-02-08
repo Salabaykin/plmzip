@@ -259,9 +259,12 @@
   border-color: var(--color-danger);
 }
 
+.code {
+  text-align: center;
+}
+
 .code:not(:last-child) {
   margin-right: 8px;
-  text-align: center;
 }
 
 .sign-up__resend-code {

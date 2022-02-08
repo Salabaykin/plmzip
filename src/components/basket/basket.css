@@ -96,7 +96,7 @@
 @media (min-width: 768px) {
   .basket-details {
     position: sticky;
-    top: 0;
+    top: 16px;
     padding: 16px;
     border: 2px solid var(--color-light);
     border-radius: 10px;

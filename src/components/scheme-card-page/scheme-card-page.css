@@ -33,7 +33,7 @@
 @media (min-width: 768px) {
   .scheme-card__preview img {
     position: sticky;
-    top: 0;
+    top: 16px;
   }
 }
 

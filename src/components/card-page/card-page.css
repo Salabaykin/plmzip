@@ -439,9 +439,6 @@
 }
 
 .card-head__price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 10px 0 16px;
   font-weight: 600;
   font-size: 20px;
@@ -449,30 +446,13 @@
   color: var(--color-black);
 }
 
-@media (min-width: 768px) {
-  .card-head__price {
-    justify-content: flex-start;
-  }
-}
-
 .card-head__old-price {
+  margin-left: 15px;
   font-weight: normal;
   font-size: 15px;
   line-height: 19px;
   text-decoration-line: line-through;
   color: rgb(23 30 38 / 50%);
-}
-
-@media (min-width: 768px) {
-  .card-head__old-price {
-    margin-left: 29%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .card-head__old-price {
-    margin-left: 32%;
-  }
 }
 
 @media (min-width: 1280px) {

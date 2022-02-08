@@ -75,29 +75,31 @@ Tooltip('[data-tippy-content]', {
 
 /* Card Popup */
 const tooltipList = document.querySelectorAll('[data-card-popup]');
-tooltipList.forEach((card: Element) => {
-  const id = card.getAttribute('data-card-id');
-  const popupList = document.querySelectorAll('[data-popup-id]');
-  let template;
-  for (let i = 0; i < popupList.length; i++) {
-    const popup = (popupList[i] as HTMLElement);
-    const { popupId } = popup.dataset;
-    if (popupId === id) {
-      template = popupList[i];
-      break;
+if (tooltipList.length) {
+  tooltipList.forEach((card: Element) => {
+    const id = card.getAttribute('data-card-id');
+    const popupList = document.querySelectorAll('[data-popup-id]');
+    let template;
+    for (let i = 0; i < popupList.length; i++) {
+      const popup = (popupList[i] as HTMLElement);
+      const { popupId } = popup.dataset;
+      if (popupId === id) {
+        template = popupList[i];
+        break;
+      }
     }
-  }
-  if (template) {
-    Tooltip(card, {
-      content: template.innerHTML,
-      placement: 'top',
-      theme: 'popup',
-      trigger: 'click',
-      interactive: true,
-      allowHTML: true,
-    });
-  }
-});
+    if (template) {
+      Tooltip(card, {
+        content: template.innerHTML,
+        placement: 'top',
+        theme: 'popup',
+        trigger: 'click',
+        interactive: true,
+        allowHTML: true,
+      });
+    }
+  });
+}
 
 /* Copy Field */
 const copyValue = () => {
@@ -116,88 +118,106 @@ const copyValue = () => {
 copyValue();
 
 /* Sign Up Slider */
-Slider('.sign-up-slider', {
-  speed: 0,
-  spaceBetween: 30,
-  autoHeight: true,
-  allowTouchMove: false,
-});
+const signUpSlider: HTMLElement | null = document.querySelector('.sign-up-slider');
+if (signUpSlider) {
+  Slider(signUpSlider, {
+    speed: 10,
+    spaceBetween: 30,
+    autoHeight: true,
+    allowTouchMove: false,
+  });
+}
 
 /* Delivery Slider */
-Slider('.delivery-slider', {
-  modules: [Thumbs],
-  speed: 0,
-  autoHeight: true,
-  allowTouchMove: false,
-  thumbs: {
-    swiper: {
-      // @ts-ignore
-      el: '.delivery-thumbs',
-      spaceBetween: 30,
-      slidesPerView: 3,
+const deliverySlider: HTMLElement | null = document.querySelector('.delivery-slider');
+if (deliverySlider) {
+  Slider(deliverySlider, {
+    modules: [Thumbs],
+    speed: 0,
+    autoHeight: true,
+    allowTouchMove: false,
+    thumbs: {
+      swiper: {
+        // @ts-ignore
+        el: '.delivery-thumbs',
+        spaceBetween: 30,
+        slidesPerView: 3,
+      },
     },
-  },
-});
+  });
+}
 
 /* Main Slider */
-Slider('.slider', {
-  spaceBetween: 10,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
+const mainPageSlider: HTMLElement | null = document.querySelector('.slider');
+if (mainPageSlider) {
+  Slider(mainPageSlider, {
+    spaceBetween: 10,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+}
 
 /* Card Slider */
-Slider('.card-page-slider', {
-  modules: [Thumbs],
-  spaceBetween: 20,
-  thumbs: {
-    swiper: {
-      // @ts-ignore
-      direction: 'vertical',
-      el: '.card-page-thumbs',
-      spaceBetween: 20,
-      slidesPerView: 4,
-      breakpoints: {
-        320: {
-          spaceBetween: 8,
-        },
-        768: {
-          spaceBetween: 10,
-        },
-        1024: {
-          spaceBetween: 20,
+const cardPageSlider: HTMLElement | null = document.querySelector('.card-page-slider');
+if (cardPageSlider) {
+  Slider(cardPageSlider, {
+    modules: [Thumbs],
+    spaceBetween: 20,
+    thumbs: {
+      swiper: {
+        // @ts-ignore
+        direction: 'vertical',
+        el: '.card-page-thumbs',
+        spaceBetween: 20,
+        slidesPerView: 4,
+        breakpoints: {
+          320: {
+            spaceBetween: 8,
+          },
+          768: {
+            spaceBetween: 10,
+          },
+          1024: {
+            spaceBetween: 20,
+          },
         },
       },
     },
-  },
-});
+  });
+}
 
 /* Gallery Slider */
-Slider('.gallery-slider', {
-  spaceBetween: 10,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
+const gallerySlider: HTMLElement | null = document.querySelector('.gallery-slider');
+if (gallerySlider) {
+  Slider(gallerySlider, {
+    spaceBetween: 10,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+}
 
 /* Basket Slider */
-Slider('.basket-slider', {
-  modules: [Thumbs],
-  speed: 0,
-  autoHeight: true,
-  allowTouchMove: false,
-  thumbs: {
-    swiper: {
-      // @ts-ignore
-      el: '.basket-nav',
-      spaceBetween: 30,
-      slidesPerView: 3,
+const basketSlider: HTMLElement | null = document.querySelector('.basket-slider');
+if (basketSlider) {
+  Slider(basketSlider, {
+    modules: [Thumbs],
+    speed: 0,
+    autoHeight: true,
+    allowTouchMove: false,
+    thumbs: {
+      swiper: {
+        // @ts-ignore
+        el: '.basket-nav',
+        spaceBetween: 30,
+        slidesPerView: 3,
+      },
     },
-  },
-});
+  });
+}
 
 /* Logged in Dropdown */
 const dropdownsList = document.querySelectorAll('.js-dropdown');

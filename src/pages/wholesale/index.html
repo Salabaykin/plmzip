@@ -6,11 +6,11 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/png" href="favicon.svg">
-  <title>О компании</title>
+  <title>Оптовый отдел</title>
 </head>
   <body class="page">
     <!-- Header desktop: is not logged in -->
-    <header class="page__header header header_type_desktop">
+    <header class="page__header header header_type_desktop wholesale-header">
       <div class="header__column header__column_order_first">
         <div class="container header__container">
           <img class="header__logo" src="/logo.svg" alt="Логотип PLMZIP">
@@ -95,7 +95,7 @@
     </header>
 
     <!-- Header mobile: is logged in -->
-    <header class="header header_type_mobile">
+    <header class="header header_type_mobile wholesale-header">
       <section class="header__container container">
         <div class="header__flex-trick">
           <button type="button" class="js-drawer-trigger round-button header__menu-button">
@@ -199,26 +199,253 @@
     </header>
 
     <main class="page__main main">
-      <section class="main__container">
-        <nav class="breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a href="#" class="breadcrumbs__link breadcrumbs__link_type_inactive">Главная</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="#" class="breadcrumbs__link">О компании</a>
-            </li>
-          </ul>
-        </nav>
-        <h1 class="main__title">О компании</h1>
+      <section class="wholesale__container">
 
-        <div class="about-page">
+        <div class="wholesale-page">
 
-          <div class="about-page__content">
+          <div class="wholesale-page__content">
 
-            <div class="about__content">
+            <div class="wholesale__content">
 
-              about__content
+              <section class="wholesale__head">
+
+                <div class="wholesale-section wholesale-head">
+                  <div class="wholesale-head__text-block">
+                    <nav class="breadcrumbs">
+                      <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                          <a href="#" class="breadcrumbs__link">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                          <a href="#" class="breadcrumbs__link breadcrumbs__link_type_inactive">Оптовый отдел</a>
+                        </li>
+                      </ul>
+                    </nav>
+
+                    <h1 class="wholesale-head__title">Оптовый отдел</h1>
+                    <p class="wholesale-head__descr">Запчасти от 2 до 300 л.с к 2-х и 4-х тактным моторам</p>
+
+                    <div class="wholesale-head__brands wholesale-brands">
+                      <div class="wholesale-brands__title">Официальный представитель:</div>
+                      <ul class="wholesale-brands__list">
+                        <li class="wholesale-brands__item">
+                          <img src="/content/wholesale/omax.png" alt="omax">
+                        </li>
+                        <li class="wholesale-brands__item">
+                          <img src="/content/wholesale/osaka.png" alt="osaka">
+                        </li>
+                        <li class="wholesale-brands__item">
+                          <img src="/content/wholesale/michigan.png" alt="michigan">
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="wholesale-head__link">
+                      <a href="#" class="button wholesale-head__button">Получить оптовые условия</a>
+                    </div>
+                  </div>
+
+                  <div class="wholesale-head__form-block">
+                    <div class="wholesale-head__logo">
+                      <img src="/content/wholesale/plmzip-logo.svg" alt="PLMZIP">
+                    </div>
+                    <div class="wholesale-head__sign-in">Войдите на сайт</div>
+                    <form class="form wholesale-form" name="sign-in" novalidate>
+                      <section class="form__section">
+                        <label class="form__label" for="wholesale-username">Номер или E-mail:</label>
+                        <input type="text" name="username" id="wholesale-username" class="form__input" required>
+                        <span class="form__error" id="wholesale-username-error"></span>
+                      </section>
+                      <section class="form__section">
+                        <label class="form__label" for="wholesale-password">Пароль:</label>
+                        <input type="password" name="password" id="wholesale-password" class="form__input form__input_type_password" required minlength="6">
+                        <button class="form__toggle-password" type="button">
+                        </button>
+                        <span class="form__error" id="wholesale-password-error"></span>
+                      </section>
+                      <a href="#" class="popup__link popup__link_align_right">Восстановить пароль</a>
+                      <button type="submit" class="button popup__button">Войти в аккаунт</button>
+                      <p class="popup__description">Нету аккаунта? <a href="#" class="popup__link">Зарегистрироваться</a></p>
+                    </form>
+                  </div>
+                </div>
+
+              </section>
+
+              <section class="wholesale__offers">
+
+                <div class="wholesale-section wholesale-offers">
+                  <h3 class="wholesale-section__title">Наш магазин предоставит выгодное оптовое предложение если вы:</h3>
+
+                  <ul class="wholesale-list">
+                    <li class="wholesale-list__item">
+                      <img src="/content/wholesale/wholesale-list-1.svg" alt="Розничный магазин" class="wholesale-list__img">
+                      <p class="wholesale-list__text">
+                        Розничный магазин
+                      </p>
+                    </li>
+                    <li class="wholesale-list__item">
+                      <img src="/content/wholesale/wholesale-list-2.svg" alt="Инернет магазин" class="wholesale-list__img">
+                      <p class="wholesale-list__text">
+                        Инернет магазин
+                      </p>
+                    </li>
+                    <li class="wholesale-list__item">
+                      <img src="/content/wholesale/wholesale-list-3.svg" alt="Сервис" class="wholesale-list__img">
+                      <p class="wholesale-list__text">
+                        Сервис
+                      </p>
+                    </li>
+                    <li class="wholesale-list__item">
+                      <img src="/content/wholesale/wholesale-list-4.svg" alt="Мастерская" class="wholesale-list__img">
+                      <p class="wholesale-list__text">
+                        Мастерская
+                      </p>
+                    </li>
+                    <li class="wholesale-list__item">
+                      <img src="/content/wholesale/wholesale-list-5.svg" alt="Производитель водной техники" class="wholesale-list__img">
+                      <p class="wholesale-list__text">
+                        Производитель водной техники
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+              </section>
+
+              <section class="wholesale__about">
+
+                <div class="wholesale-section wholesale-about">
+                  <div class="wholesale-about__block">
+                    <div class="wholesale-about__about-descr">
+                      <h3 class="wholesale-about__title">О компании</h3>
+                      <p>
+                        Наша компания узко специализируется в запасных частях и комплектующим к подвестным лодочным моторами производства Япония и Китай.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="wholesale-about__block">
+                    <div class="wholesale-about__more">
+                      <a href="#" class="button wholesale-about__button">Подробнее о компании</a>
+                    </div>
+                    <div class="wholesale-about__descr">
+                      <p>Наши специалисты имеют большую базу знаний и могу
+                        подобрать детали к большинству моторов, также за многие
+                        годы мы наработали подходящий ассортимент, который должен
+                        вас заинтересовать. Подобных компаний, имеющих такой
+                        ассортимент деталей на рынке нет. Наши цены вас приятно удивят. Будем рады сотрудничать.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </section>
+
+              <section class="wholesale__advantages">
+
+                <div class="wholesale-section wholesale-advantages">
+                  <h3 class="wholesale-section__title">Преимущества</h3>
+
+                  <ul class="wholesale-list">
+                    <li class="wholesale-list__item">
+                      <img src="/content/wholesale/wholesale-list-6.svg" alt="10000 + позиций в наличии" class="wholesale-list__img">
+                      <p class="wholesale-list__text">
+                        10000 + позиций в наличии
+                      </p>
+                    </li>
+                    <li class="wholesale-list__item">
+                      <img src="/content/wholesale/wholesale-list-7.svg" alt="Более 15 лет успешного развивтия комапнии" class="wholesale-list__img">
+                      <p class="wholesale-list__text">
+                        Более 15 лет успешного развивтия комапнии
+                      </p>
+                    </li>
+                    <li class="wholesale-list__item">
+                      <img src="/content/wholesale/wholesale-list-8.svg" alt="Техническая поддержка профессионалов" class="wholesale-list__img">
+                      <p class="wholesale-list__text">
+                        Техническая поддержка профессионалов
+                      </p>
+                    </li>
+                    <li class="wholesale-list__item">
+                      <img src="/content/wholesale/wholesale-list-9.svg" alt="Запчасти на японские и китайчкие моторы" class="wholesale-list__img">
+                      <p class="wholesale-list__text">
+                        Запчасти на японские и китайчкие моторы
+                      </p>
+                    </li>
+                    <li class="wholesale-list__item">
+                      <img src="/content/wholesale/wholesale-list-10.svg" alt="Большие склады в Москве и Хабаровске" class="wholesale-list__img">
+                      <p class="wholesale-list__text">
+                        Большие склады в Москве и Хабаровске
+                      </p>
+                    </li>
+                    <li class="wholesale-list__item">
+                      <img src="/content/wholesale/wholesale-list-11.svg" alt="Отправка товара в день заказа" class="wholesale-list__img">
+                      <p class="wholesale-list__text">
+                        Отправка товара в день заказа
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+              </section>
+
+              <section class="wholesale__request">
+
+                <div class="wholesale-section wholesale-request">
+                  <h3 class="wholesale-section__title">Запрос на оптовое предложение</h3>
+
+                  <form class="form wholesale-request__form request-form" name="request" novalidate>
+                    <div class="request-form__wrapper">
+                      <section class="form__section">
+                        <label class="form__label required" for="request-surname">Фамилия:</label>
+                        <input class="form__input" type="text" name="request-surname" id="request-surname">
+                      </section>
+                      <section class="form__section">
+                        <label class="form__label required" for="request-name">Имя:</label>
+                        <input class="form__input" type="text" name="request-name" id="request-name">
+                      </section>
+                      <section class="form__section">
+                        <label class="form__label required" for="request-fam">Отчество:</label>
+                        <input class="form__input" type="text" name="request-fam" id="request-fam">
+                      </section>
+                      <section class="form__section">
+                        <label class="form__label required" for="request-phone">Телефон:</label>
+                        <input class="form__input" type="text" name="request-phone" id="request-phone">
+                      </section>
+                      <section class="form__section">
+                        <label class="form__label required" for="request-email">E-mail:</label>
+                        <input class="form__input" type="text" name="request-email" id="request-email">
+                      </section>
+                      <section class="form__section">
+                        <label class="form__label required" for="request-city">Город:</label>
+                        <input class="form__input" type="text" name="request-city" id="request-city">
+                      </section>
+                      <section class="form__section">
+                        <label class="form__label required" for="request-company-name">Наименование компании:</label>
+                        <input class="form__input" type="text" name="request-company-name" id="request-company-name">
+                      </section>
+                      <section class="form__section">
+                        <label class="form__label" for="request-company-website">Сайт компании, если есть:</label>
+                        <input class="form__input" type="text" name="request-company-website" id="request-company-website">
+                      </section>
+                      <section class="form__section">
+                        <label class="form__label required" for="request-activity-type">Вид деятельности:</label>
+                        <input class="form__input" type="text" name="request-activity-type" id="request-activity-type">
+                      </section>
+                    </div>
+
+                    <div class="wholesale-request__form-footer">
+                      <section class="form__section">
+                        <label class="form__label" for="request-comment">Комментарий:</label>
+                        <textarea class="form__input" name="request-comment" id="request-comment" rows="3" placeholder="Введите ваш комментарий..."></textarea>
+                      </section>
+                      <section class="form__section">
+                        <button class="button request-form__button" type="submit">Отправить запрос</button>
+                      </section>
+                    </div>
+                  </form>
+                </div>
+
+              </section>
 
             </div>
 

@@ -51,3 +51,6 @@
 
 /* Sign up */
 @import "../components/sign-up/sign-up.css";
+
+/* Wholesale */
+@import "../components/wholesale/wholesale.css";
