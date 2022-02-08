@@ -15,59 +15,63 @@ import { Choice } from '../components/search/Choice';
 import { Tooltip } from '../components/tooltip/Tooltip';
 import { Toggler } from '../components/toggler/Toggler';
 
+/* Quantity */
+formQuantity();
+
+/* Toggler */
+const toggler = document.querySelectorAll('[data-toggler]');
+if (toggler.length) {
+  Toggler(toggler, 'active');
+}
+
+/* View Password */
+formViewPass();
+
 /* Custom Select */
 const searchSelectParams = document.querySelectorAll('.search-param');
-searchSelectParams.forEach((select: Element) => {
-  Choice(select, {
-    allowHTML: true,
-    searchEnabled: false,
-    itemSelectText: '',
-    classNames: {
-      button: 'filter__arrow',
-    },
+if (searchSelectParams.length) {
+  searchSelectParams.forEach((select: Element) => {
+    Choice(select, {
+      allowHTML: true,
+      searchEnabled: false,
+      itemSelectText: '',
+      classNames: {
+        button: 'filter__arrow',
+      },
+    });
   });
-});
+}
 
-/* Sign Up Slider */
-Slider('.sign-up-slider', {
-  speed: 0,
-  spaceBetween: 30,
-  autoHeight: true,
-  allowTouchMove: false,
-});
-
-Tooltip('[data-tippy-content]', {
-  placement: 'top-end',
-  theme: 'light',
-});
-
+/* Input Mask */
+const smsCode = document.querySelectorAll('.code');
 const phoneMaskOptions = {
   selector: '#phone',
   inputMask: '+7(999)999-99-99',
   placeholder: '+7(___)___-__-__',
 };
-mask(phoneMaskOptions);
-
-const smsCode = document.querySelectorAll('.code');
-smsCode.forEach((_codeElement, index) => {
-  const smsMaskOptions = {
-    selector: `#code-${index + 1}`,
-    inputMask: '9',
-  };
-  mask(smsMaskOptions);
-});
-
-const emailMaskOptions = {
-  selector: '#email',
-  inputMask: '*{2,25}@*{2,20}.*{2,15}',
-};
-mask(emailMaskOptions);
-
 const captchaMaskOptions = {
   selector: '#captcha',
   inputMask: '*{4,10}',
 };
+
+if (smsCode.length) {
+  smsCode.forEach((_codeElement, index) => {
+    const smsMaskOptions = {
+      selector: `#code-${index + 1}`,
+      inputMask: '9',
+    };
+    mask(smsMaskOptions);
+  });
+}
+
+mask(phoneMaskOptions);
 mask(captchaMaskOptions);
+
+/* Tooltip */
+Tooltip('[data-tippy-content]', {
+  placement: 'top-end',
+  theme: 'light',
+});
 
 /* Card Popup */
 const tooltipList = document.querySelectorAll('[data-card-popup]');
@@ -95,13 +99,6 @@ tooltipList.forEach((card: Element) => {
   }
 });
 
-/* Quantity */
-formQuantity();
-
-/* Toggler */
-const toggler = document.querySelectorAll('[data-toggler]');
-Toggler(toggler, 'active');
-
 /* Copy Field */
 const copyValue = () => {
   const fields = document.querySelectorAll('[data-copy]');
@@ -118,8 +115,13 @@ const copyValue = () => {
 };
 copyValue();
 
-/* Quantity */
-formViewPass();
+/* Sign Up Slider */
+Slider('.sign-up-slider', {
+  speed: 0,
+  spaceBetween: 30,
+  autoHeight: true,
+  allowTouchMove: false,
+});
 
 /* Delivery Slider */
 Slider('.delivery-slider', {
@@ -276,7 +278,6 @@ if (visibilityElement) {
 const brandsElement = document.querySelector('.brands');
 if (brandsElement) {
   const brands = new Brands(brandsElement);
-
   brands.setEventListeners();
 }
 
