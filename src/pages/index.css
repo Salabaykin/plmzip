@@ -1,7 +1,7 @@
 @import "./global.css";
 @import "./common.css";
 
-/* Index page */
+/* Main */
 @import "../components/search/search.css";
 @import "../components/header/header.css";
 @import "../components/list/list.css";
@@ -12,3 +12,42 @@
 @import "../components/advantages/advantages.css";
 @import "../components/brands/brands.css";
 @import "../components/accordion/accordion.css";
+@import "../components/breadcrumbs/breadcrumbs.css";
+
+/* About */
+@import "../components/about/about.css";
+
+/* Basket */
+@import "../components/profile/orders.css";
+@import "../components/basket/basket.css";
+@import "../components/basket/order-details.css";
+
+/* Card */
+@import "../components/card-page/card-page.css";
+
+/* Catalog */
+@import "../components/catalog/catalog.css";
+@import "../components/cards/cards.css";
+
+/* Contacts */
+@import "../components/contacts/contacts.css";
+
+/* Delivery */
+@import "../components/delivery/delivery.css";
+
+/* Favorites */
+@import "../components/favorite/favorites.css";
+
+/* Payment */
+@import "../components/payment/payment.css";
+
+/* Profile */
+@import "../components/profile/profile.css";
+
+/* Search page */
+@import "../components/search/search-page.css";
+@import "../components/search/search-schemes-page.css";
+@import "../components/scheme-card-page/scheme-card-page.css";
+
+/* Sign up */
+@import "../components/sign-up/sign-up.css";

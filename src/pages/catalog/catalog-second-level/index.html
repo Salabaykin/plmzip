@@ -2,11 +2,7 @@
 <html lang="en">
   <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" type="image/png" href="favicon.svg">
-  <title>Поиск по параметрам</title>
+  <title>Каталог</title>
 </head>
   <body class="page">
     <!-- Header desktop: is not logged in -->
@@ -203,365 +199,82 @@
         <nav class="breadcrumbs">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
-              <a href="#" class="breadcrumbs__link breadcrumbs__link_type_inactive">Главная</a>
+              <a href="#" class="breadcrumbs__link">Главная</a>
             </li>
             <li class="breadcrumbs__item">
-              <a href="#" class="breadcrumbs__link">Избранное</a>
+              <a href="#" class="breadcrumbs__link">Каталог товаров</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__text">Запчасти</span>
             </li>
           </ul>
         </nav>
-        <h1 class="main__title">Избранное</h1>
+        <h1 class="main__title">Запчасти</h1>
+        <p class="main__description">Выберите тот раздел, который вам нужен</p>
 
-        <div class="favorites-page">
-
-          <div style="display: none" class="empty-page empty-favorites">
-            <div class="empty-page__left-block">
-              <img class="empty-page__image" src="/content/empty-favorites.png" alt="Нет избранных товаров">
-            </div>
-            <div class="empty-page__right-block">
-              <h3 class="empty-page__title">Здесь пусто</h3>
-              <p class="empty-page__descr">
-                Для того чтобы увидеть товары, добавьте их в избранное.<br>
-                Пожалуйста, перейдите в каталог и выберите что-нибудь.
-              </p>
-              <a href="#" class="button empty-page__button">Перейти в каталог</a>
-            </div>
-          </div>
-
-          <div class="favorites-page__content">
-
-            <ul class="card-wrapper">
-
-              <li class="card">
-                <div class="card__favorite">
-                  <button type="button" class="favorite active" data-toggler></button>
-                </div>
-                <div class="card__article">арт: 6L5-44352-00_OM</div>
-                <a href="#" class="card__preview">
-                  <img class="card__image" src="/content/slide.png" alt="Винт Yamaha 3, F2-2.5 (3x7-1/4X6)">
-                </a>
-                <a href="#" class="card__name">Винт Yamaha Винт Yamaha Винт Yamaha 3, F2-2.5 (3x7-1/4X6)</a>
-                <div class="card__tags">
-                  <span class="tag-sale">-70%</span>
-                  <span class="tag-new">новинка</span>
-                </div>
-                <div class="card__price">1 600 ₽ <span class="card__old-price">2 150 ₽</span></div>
-                <div class="card__header">
-                  <div data-popup-id="1" class="card-dropdown">
-                    <form action="#" name="card-1">
-                      <div class="card-dropdown__head">
-                        <span class="card-dropdown__title">В корзину</span>
-                        <span class="card-dropdown__close"></span>
-                      </div>
-                      <ul class="card-dropdown__list">
-                        <li class="card-dropdown__item">
-                          <div class="card-dropdown__descr">
-                            <span class="card-dropdown__city">Москва</span>
-                            <span class="card-dropdown__count">В наличии 25 шт.</span>
-                          </div>
-                          <div class="card-dropdown__amount">
-                            <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="0">
-                              </div>
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card-dropdown__item">
-                          <div class="card-dropdown__descr">
-                            <span class="card-dropdown__city">Хабаровск</span>
-                            <span class="card-dropdown__count">В наличии 25 шт.</span>
-                          </div>
-                          <div class="card-dropdown__amount">
-                            <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="0">
-                              </div>
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card-dropdown__item">
-                          <div class="card-dropdown__descr">
-                            <span class="card-dropdown__city">Хабаровск</span>
-                            <span class="card-dropdown__count">В наличии 25 шт.</span>
-                          </div>
-                          <div class="card-dropdown__amount">
-                            <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="0">
-                              </div>
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <button type="submit" class="button card-dropdown__button">Добавить в корзину</button>
-                    </form>
-                  </div>
-                  <button type="button" class="button card__button" data-card-id="1" data-card-popup>
-                    Купить
-                  </button>
-                </div>
-              </li>
-
-              <li class="card">
-                <div class="card__favorite">
-                  <button type="button" class="favorite active" data-toggler></button>
-                </div>
-                <div class="card__article">арт: 6L5-44352-00_OM</div>
-                <a href="#" class="card__preview">
-                  <img class="card__image" src="/content/slide.png" alt="Винт Yamaha 3, F2-2.5 (3x7-1/4X6)">
-                </a>
-                <a href="#" class="card__name">Винт Yamaha Винт Yamaha Винт Yamaha 3, F2-2.5 (3x7-1/4X6)</a>
-                <div class="card__tags">
-                  <span class="tag-sale">-70%</span>
-                  <span class="tag-new">новинка</span>
-                </div>
-                <div class="card__price">1 600 ₽ <span class="card__old-price">2 150 ₽</span></div>
-                <div class="card__header">
-                  <div data-popup-id="1" class="card-dropdown">
-                    <form action="#" name="card-1">
-                      <div class="card-dropdown__head">
-                        <span class="card-dropdown__title">В корзину</span>
-                        <span class="card-dropdown__close"></span>
-                      </div>
-                      <ul class="card-dropdown__list">
-                        <li class="card-dropdown__item">
-                          <div class="card-dropdown__descr">
-                            <span class="card-dropdown__city">Москва</span>
-                            <span class="card-dropdown__count">В наличии 25 шт.</span>
-                          </div>
-                          <div class="card-dropdown__amount">
-                            <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="0">
-                              </div>
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card-dropdown__item">
-                          <div class="card-dropdown__descr">
-                            <span class="card-dropdown__city">Хабаровск</span>
-                            <span class="card-dropdown__count">В наличии 25 шт.</span>
-                          </div>
-                          <div class="card-dropdown__amount">
-                            <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="0">
-                              </div>
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card-dropdown__item">
-                          <div class="card-dropdown__descr">
-                            <span class="card-dropdown__city">Хабаровск</span>
-                            <span class="card-dropdown__count">В наличии 25 шт.</span>
-                          </div>
-                          <div class="card-dropdown__amount">
-                            <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="0">
-                              </div>
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <button type="submit" class="button card-dropdown__button">Добавить в корзину</button>
-                    </form>
-                  </div>
-                  <button type="button" class="button card__button" data-card-id="1" data-card-popup>
-                    Купить
-                  </button>
-                </div>
-              </li>
-
-              <li class="card">
-                <div class="card__favorite">
-                  <button type="button" class="favorite active" data-toggler></button>
-                </div>
-                <div class="card__article">арт: 6L5-44352-00_OM</div>
-                <a href="#" class="card__preview">
-                  <img class="card__image" src="/content/slide.png" alt="Винт Yamaha 3, F2-2.5 (3x7-1/4X6)">
-                </a>
-                <a href="#" class="card__name">Винт Yamaha Винт Yamaha Винт Yamaha 3, F2-2.5 (3x7-1/4X6)</a>
-                <div class="card__tags">
-                  <span class="tag-sale">-70%</span>
-                  <span class="tag-new">новинка</span>
-                </div>
-                <div class="card__price">1 600 ₽ <span class="card__old-price">2 150 ₽</span></div>
-                <div class="card__header">
-                  <div data-popup-id="1" class="card-dropdown">
-                    <form action="#" name="card-1">
-                      <div class="card-dropdown__head">
-                        <span class="card-dropdown__title">В корзину</span>
-                        <span class="card-dropdown__close"></span>
-                      </div>
-                      <ul class="card-dropdown__list">
-                        <li class="card-dropdown__item">
-                          <div class="card-dropdown__descr">
-                            <span class="card-dropdown__city">Москва</span>
-                            <span class="card-dropdown__count">В наличии 25 шт.</span>
-                          </div>
-                          <div class="card-dropdown__amount">
-                            <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="0">
-                              </div>
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card-dropdown__item">
-                          <div class="card-dropdown__descr">
-                            <span class="card-dropdown__city">Хабаровск</span>
-                            <span class="card-dropdown__count">В наличии 25 шт.</span>
-                          </div>
-                          <div class="card-dropdown__amount">
-                            <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="0">
-                              </div>
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card-dropdown__item">
-                          <div class="card-dropdown__descr">
-                            <span class="card-dropdown__city">Хабаровск</span>
-                            <span class="card-dropdown__count">В наличии 25 шт.</span>
-                          </div>
-                          <div class="card-dropdown__amount">
-                            <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="0">
-                              </div>
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <button type="submit" class="button card-dropdown__button">Добавить в корзину</button>
-                    </form>
-                  </div>
-                  <button type="button" class="button card__button" data-card-id="1" data-card-popup>
-                    Купить
-                  </button>
-                </div>
-              </li>
-
-              <li class="card">
-                <div class="card__favorite">
-                  <button type="button" class="favorite active" data-toggler></button>
-                </div>
-                <div class="card__article">арт: 6L5-44352-00_OM</div>
-                <a href="#" class="card__preview">
-                  <img class="card__image" src="/content/slide.png" alt="Винт Yamaha 3, F2-2.5 (3x7-1/4X6)">
-                </a>
-                <a href="#" class="card__name">Винт Yamaha Винт Yamaha Винт Yamaha 3, F2-2.5 (3x7-1/4X6)</a>
-                <div class="card__tags">
-                  <span class="tag-sale">-70%</span>
-                  <span class="tag-new">новинка</span>
-                </div>
-                <div class="card__price">1 600 ₽ <span class="card__old-price">2 150 ₽</span></div>
-                <div class="card__header">
-                  <div data-popup-id="1" class="card-dropdown">
-                    <form action="#" name="card-1">
-                      <div class="card-dropdown__head">
-                        <span class="card-dropdown__title">В корзину</span>
-                        <span class="card-dropdown__close"></span>
-                      </div>
-                      <ul class="card-dropdown__list">
-                        <li class="card-dropdown__item">
-                          <div class="card-dropdown__descr">
-                            <span class="card-dropdown__city">Москва</span>
-                            <span class="card-dropdown__count">В наличии 25 шт.</span>
-                          </div>
-                          <div class="card-dropdown__amount">
-                            <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="0">
-                              </div>
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card-dropdown__item">
-                          <div class="card-dropdown__descr">
-                            <span class="card-dropdown__city">Хабаровск</span>
-                            <span class="card-dropdown__count">В наличии 25 шт.</span>
-                          </div>
-                          <div class="card-dropdown__amount">
-                            <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="0">
-                              </div>
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card-dropdown__item">
-                          <div class="card-dropdown__descr">
-                            <span class="card-dropdown__city">Хабаровск</span>
-                            <span class="card-dropdown__count">В наличии 25 шт.</span>
-                          </div>
-                          <div class="card-dropdown__amount">
-                            <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="0">
-                              </div>
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <button type="submit" class="button card-dropdown__button">Добавить в корзину</button>
-                    </form>
-                  </div>
-                  <button type="button" class="button card__button" data-card-id="1" data-card-popup>
-                    Купить
-                  </button>
-                </div>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <div class="catalog-show-more">
-            <button type="button" class=" button catalog-show-more__button">Смотреть ещё</button>
-          </div>
-
-          <div class="pagination">
-            <ul class="pagination__wrapper">
-              <li class="pagination__link active">
-                <span>1</span>
-              </li>
-              <li><a class="pagination__link" href="#">2</a></li>
-              <li><a class="pagination__link" href="#">3</a></li>
-              <li><a class="pagination__link" href="#">4</a></li>
-              <li><a class="pagination__link" href="#">5</a></li>
-              <li class="last">
-                <a class="pagination__link" href="#"><i class="icon-arrow-right"></i></a>
-              </li>
-            </ul>
-          </div>
+        <div class="catalog">
+          <ul class="catalog__list cards">
+            <li class="cards__item">
+              <a class="cards__link" href="#">
+                <img class="cards__image" src="/content/catalog/01.jpg" alt="Детали подвески, дейдвуды">
+                Детали подвески, дейдвуды
+              </a>
+            </li>
+            <li class="cards__item">
+              <a class="cards__link" href="#">
+                <img class="cards__image" src="/content/catalog/02.jpg" alt="Детали подвески, дейдвуды">
+                Детали системы охлаждения,термостаты
+              </a>
+            </li>
+            <li class="cards__item">
+              <a class="cards__link" href="#">
+                <img class="cards__image" src="/content/catalog/03.jpg" alt="Детали подвески, дейдвуды">
+                Детали трима (гидроподъемник)
+              </a>
+            </li>
+            <li class="cards__item">
+              <a class="cards__link" href="#">
+                <img class="cards__image" src="/content/catalog/04.jpg" alt="Детали подвески, дейдвуды">
+                Детали цилиндро-поршневой группы
+              </a>
+            </li>
+            <li class="cards__item">
+              <a class="cards__link" href="#">
+                <img class="cards__image" src="/content/catalog/05.jpg" alt="Запчасти ГРМ">
+                Запчасти ГРМ
+              </a>
+            </li>
+            <li class="cards__item">
+              <a class="cards__link" href="#">
+                <img class="cards__image" src="/content/catalog/06.jpg" alt="Капоты и детали">
+                Капоты и детали
+              </a>
+            </li>
+            <li class="cards__item">
+              <a class="cards__link" href="#">
+                <img class="cards__image" src="/content/catalog/07.jpg" alt="Прокладки ДВС, уплотнения, сальники">
+                Прокладки ДВС, уплотнения, сальники
+              </a>
+            </li>
+            <li class="cards__item">
+              <a class="cards__link" href="#">
+                <img class="cards__image" src="/content/catalog/08.jpg" alt="Румпель">
+                Румпель
+              </a>
+            </li>
+            <li class="cards__item">
+              <a class="cards__link" href="#">
+                <img class="cards__image" src="/content/catalog/09.jpg" alt="Система зажигания">
+                Система зажигания
+              </a>
+            </li>
+            <li class="cards__item">
+              <a class="cards__link" href="#">
+                <img class="cards__image" src="/content/catalog/10.jpg" alt="Система запуска и электрооборудование">
+                Система запуска и электрооборудование
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
@@ -1012,6 +725,6 @@
       </li>
     </ul>
 
-    <script type="module" src="../index.ts" defer></script>
+    <script type="module" src="../../index.ts" defer></script>
   </body>
 </html>

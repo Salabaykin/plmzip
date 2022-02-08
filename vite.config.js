@@ -22,16 +22,22 @@ module.exports = defineConfig({
         payment: resolve(__dirname, 'src/pages/payment/index.html'),
         about: resolve(__dirname, 'src/pages/about/index.html'),
         delivery: resolve(__dirname, 'src/pages/delivery/index.html'),
-        'order-details': resolve(__dirname, 'src/pages/basket/order-details/index.html'),
-        'card-page': resolve(__dirname, 'src/pages/card-page/index.html'),
-        'search-by-scheme': resolve(__dirname, 'src/pages/search/search-by-scheme/index.html'),
+        wholesale: resolve(__dirname, 'src/pages/wholesale/index.html'),
         'search-by-scheme-fifth-level': resolve(__dirname, 'src/pages/search/search-by-scheme/search-by-scheme-fifth-level/index.html'),
         'search-by-scheme-fourth-level': resolve(__dirname, 'src/pages/search/search-by-scheme/search-by-scheme-fourth-level/index.html'),
         'search-by-scheme-second-level': resolve(__dirname, 'src/pages/search/search-by-scheme/search-by-scheme-second-level/index.html'),
         'search-by-scheme-third-level': resolve(__dirname, 'src/pages/search/search-by-scheme/search-by-scheme-third-level/index.html'),
+        'catalog-second-level': resolve(__dirname, 'src/pages/catalog/catalog-second-level/index.html'),
+        'search-by-scheme': resolve(__dirname, 'src/pages/search/search-by-scheme/index.html'),
+        'order-details': resolve(__dirname, 'src/pages/basket/order-details/index.html'),
+        'card-page': resolve(__dirname, 'src/pages/card-page/index.html'),
         'sign-up': resolve(__dirname, 'src/pages/sign-up/index.html'),
-        'catalog-second-level': resolve(__dirname, 'src/pages/catalog-second-level/index.html'),
-      }
+      },
+      output: {
+        entryFileNames: `assets/js/components/[name].js`,
+        chunkFileNames: `assets/js/[name].js`,
+        assetFileNames: `assets/[name].[ext]`
+      },
     }
   }
 })
