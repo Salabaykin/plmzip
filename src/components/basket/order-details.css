@@ -286,6 +286,15 @@
   line-height: 19px;
 }
 
+.order-details__footer--first-screen {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.order-details__footer--first-screen .order-details__button {
+  width: 50%;
+}
+
 .order-details__button:not(:last-child) {
   margin-right: 8px;
 }

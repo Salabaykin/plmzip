@@ -82,7 +82,7 @@
 
 .scheme-category__item {
   border: 1px solid var(--color-light);
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   cursor: pointer;
   transition: border-color 0.2s;
@@ -91,6 +91,12 @@
 @media (min-width: 768px) {
   .scheme-category__item {
     border: 2px solid var(--color-light);
+  }
+}
+
+@media (min-width: 1280px) {
+  .scheme-category__item {
+    border-radius: 10px;
   }
 }
 

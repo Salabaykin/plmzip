@@ -233,7 +233,7 @@
 
         <div class="profile__content">
 
-          <ul class="user-orders user-orders_type_desktop">
+          <ul class="user-orders">
             <li class="user-orders__row">
               <ul class="accordion">
 
@@ -272,8 +272,8 @@
                             Самовывоз: <b>г. Москва, ул. Буракова 12с2 (проходная Автотехцентр «Техреал»)</b>
                           </span>
                         </li>
-                        <li class="user-orders__item user-orders__item--no-padding">
-                          <span class="user-orders__order-pay">
+                        <li class="user-orders__item user-orders__item--no-padding ">
+                          <span class="user-orders__order-pay user-orders__order-pay--desktop">
                             <a href="#" class="button user-orders__pay">Оплатить</a>
                           </span>
                         </li>
@@ -281,7 +281,7 @@
                     </div>
 
                     <!-- The toggle icon -->
-                    <div class="accordion__toggle">
+                    <div class="accordion__toggle accordion__toggle--desktop">
                       <svg class="accordion__arrow-icon" width="19"
                            height="19" viewBox="0 0 19 19"
                            fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -314,6 +314,10 @@
 
                     <ul class="orders__list">
 
+                      <a class="orders__link orders__link--mobile" href="#">
+                        Трос румпеля Suzuki DT40 (Osaka)
+                      </a>
+
                       <li class="orders__item">
                         <ul class="orders__wrapper">
                           <li class="orders__preview">
@@ -322,7 +326,7 @@
                             </a>
                           </li>
                           <li class="orders__descr">
-                            <a class="orders__link" href="#">
+                            <a class="orders__link orders__link--desktop" href="#">
                               Трос румпеля Suzuki DT40 (Osaka)
                             </a>
                             <p class="orders__article">
@@ -360,20 +364,37 @@
 
                     </ul>
                   </div>
+
+                  <ul class="user-orders__list accordion__trigger accordion__trigger--mobile">
+                    <li class="user-orders__item">
+                        <span class="user-orders__order-pay">
+                          <a href="#" class="button user-orders__pay">Оплатить</a>
+                        </span>
+                    </li>
+                    <!-- The toggle icon -->
+                    <li class="user-orders__item accordion__toggle">
+                      <svg class="accordion__arrow-icon" width="19"
+                           height="19" viewBox="0 0 19 19"
+                           fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1321_900)">
+                          <path
+                            d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1321_900">
+                            <rect width="19" height="19" fill="white"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </li>
+                  </ul>
+
                 </li>
-
-              </ul>
-            </li>
-          </ul>
-
-          <ul class="user-orders user-orders_type_mobile">
-            <li class="user-orders__row">
-              <ul class="accordion">
 
                 <!-- Each accordion item -->
                 <li class="js-accordion-item accordion__item">
                   <!-- Heading -->
-                  <div class="accordion__header">
+                  <div class="accordion__header accordion__trigger">
                     <!-- The title -->
                     <div class="accordion__title">
                       <ul class="user-orders__list">
@@ -392,28 +413,66 @@
                             Статус: <b>В работе</b>
                           </span>
                         </li>
-                        <li class="user-orders__item user-orders__item--width-auto">
-                          <span class="user-orders__order-address">
-                            Самовывоз: <b>г. Москва, ул. Буракова 12с2 (проходная Автотехцентр «Техреал»)</b>
-                          </span>
-                        </li>
                         <li class="user-orders__item">
                           <span class="user-orders__order-sum">
                             Сумма заказа: <b>1 600 ₽</b>
                           </span>
                         </li>
                       </ul>
+
+                      <ul class="user-orders__list">
+                        <li class="user-orders__item user-orders__item--width-auto">
+                          <span class="user-orders__order-address">
+                            Самовывоз: <b>г. Москва, ул. Буракова 12с2 (проходная Автотехцентр «Техреал»)</b>
+                          </span>
+                        </li>
+                        <li class="user-orders__item user-orders__item--no-padding ">
+                          <span class="user-orders__order-pay user-orders__order-pay--desktop">
+                            <a href="#" class="button user-orders__pay">Оплатить</a>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- The toggle icon -->
+                    <div class="accordion__toggle accordion__toggle--desktop">
+                      <svg class="accordion__arrow-icon" width="19"
+                           height="19" viewBox="0 0 19 19"
+                           fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1321_900)">
+                          <path
+                            d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                            fill="#0071BC" stroke="white"></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1321_900">
+                            <rect width="19" height="19" fill="white"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
                     </div>
                   </div>
 
                   <!-- The content -->
                   <div class="accordion__content">
+                    <div class="orders-head">
+                      <ul class="orders__wrapper">
+                        <li class="orders-head__item orders__preview"></li>
+                        <li class="orders-head__item orders__descr">Наименование</li>
+                        <li class="orders-head__item orders__price">Цена</li>
+                        <li class="orders-head__item orders__count">Кол-во</li>
+                        <li class="orders-head__item orders__like"></li>
+                        <li class="orders-head__item orders__delete"></li>
+                      </ul>
+                    </div>
+
                     <ul class="orders__list">
 
+                      <a class="orders__link orders__link--mobile" href="#">
+                        Трос румпеля Suzuki DT40 (Osaka)
+                      </a>
+
                       <li class="orders__item">
-                        <a class="orders__link" href="#">
-                          Трос румпеля Suzuki DT40 (Osaka)
-                        </a>
                         <ul class="orders__wrapper">
                           <li class="orders__preview">
                             <a class="orders__link" href="#">
@@ -421,10 +480,14 @@
                             </a>
                           </li>
                           <li class="orders__descr">
+                            <a class="orders__link orders__link--desktop" href="#">
+                              Трос румпеля Suzuki DT40 (Osaka)
+                            </a>
                             <p class="orders__article">
                               арт:63610-94402-TW
                             </p>
                             <div class="orders__info">
+                              <span class="orders__per-price">490 ₽</span>
                               <span class="tag-sale">-70%</span>
                               <span class="tag-new">новинка</span>
                             </div>
@@ -437,11 +500,11 @@
                           </li>
                           <li class="orders__count">
                             <div class="quantity">
-                              <button type="button" class="quantity__button quantity__button_plus"></button>
+                              <button type="button" class="quantity__button quantity__button_minus"></button>
                               <div class="quantity__input">
                                 <input autocomplete="off" type="text" name="quantity" data-maxcount="10" value="1">
                               </div>
-                              <button type="button" class="quantity__button quantity__button_minus"></button>
+                              <button type="button" class="quantity__button quantity__button_plus"></button>
                             </div>
                           </li>
                           <li class="orders__like">
@@ -456,7 +519,7 @@
                     </ul>
                   </div>
 
-                  <ul class="user-orders__list accordion__trigger">
+                  <ul class="user-orders__list accordion__trigger accordion__trigger--mobile">
                     <li class="user-orders__item">
                         <span class="user-orders__order-pay">
                           <a href="#" class="button user-orders__pay">Оплатить</a>
@@ -465,20 +528,21 @@
                     <!-- The toggle icon -->
                     <li class="user-orders__item accordion__toggle">
                       <svg class="accordion__arrow-icon" width="19"
-                             height="19" viewBox="0 0 19 19"
-                             fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g clip-path="url(#clip0_1321_900)">
-                            <path
-                              d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"></path>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_1321_900">
-                              <rect width="19" height="19" fill="white"></rect>
-                            </clipPath>
-                          </defs>
-                        </svg>
+                           height="19" viewBox="0 0 19 19"
+                           fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1321_900)">
+                          <path
+                            d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1321_900">
+                            <rect width="19" height="19" fill="white"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
                     </li>
                   </ul>
+
                 </li>
 
               </ul>

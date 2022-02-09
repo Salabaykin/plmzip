@@ -4,26 +4,8 @@
   list-style: none;
 }
 
-.user-orders_type_desktop {
-  display: none;
-}
-
-.user-orders_type_mobile {
-  display: block;
-}
-
 .profile-nav__item:not(:last-child) {
   margin-bottom: 8px;
-}
-
-@media (min-width: 1280px) {
-  .user-orders_type_mobile {
-    display: none;
-  }
-
-  .user-orders_type_desktop {
-    display: block;
-  }
 }
 
 .user-orders .accordion {
@@ -333,6 +315,12 @@
   text-decoration: none;
 }
 
+.orders__link--desktop,
+.user-orders__order-pay--desktop,
+.accordion__toggle--desktop {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .orders__link {
     font-size: 15px;
@@ -344,6 +332,17 @@
   .orders__link {
     font-size: 20px;
     line-height: 26px;
+  }
+
+  .orders__link--desktop,
+  .user-orders__order-pay--desktop,
+  .accordion__toggle--desktop {
+    display: block;
+  }
+
+  .orders__link--mobile,
+  .accordion__trigger--mobile {
+    display: none !important;
   }
 }
 
@@ -423,15 +422,16 @@
 .orders__delete {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .orders__delete-button {
   background: transparent url("../popup/close.svg") 50% no-repeat;
-  background-size: 28px;
+  background-size: 22px;
   border: none;
   cursor: pointer;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   margin: 0;
   padding: 0;
 }
@@ -439,6 +439,13 @@
 @media (min-width: 1280px) {
   .orders__delete {
     justify-content: center;
+  }
+
+  .orders__delete-button {
+    background: transparent url("../popup/close.svg") 50% no-repeat;
+    background-size: 28px;
+    height: 30px;
+    width: 30px;
   }
 }
 

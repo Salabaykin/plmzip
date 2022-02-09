@@ -203,18 +203,6 @@ if (cardPageSlider) {
   });
 }
 
-/* Gallery Slider */
-const gallerySlider: HTMLElement | null = document.querySelector('.gallery-slider');
-if (gallerySlider) {
-  Slider(gallerySlider, {
-    spaceBetween: 10,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-}
-
 /* Basket Slider */
 const basketSlider: HTMLElement | null = document.querySelector('.basket-slider');
 if (basketSlider) {

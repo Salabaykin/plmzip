@@ -1,11 +1,11 @@
 export class Accordion {
   private readonly accordionElement: Element;
 
-  private readonly accordionTriggerElement: Element;
+  private readonly accordionTriggerElement: NodeList;
 
   private readonly accordionTriggerIconClassName: string;
 
-  private readonly accordionTriggerIconElement: Element;
+  private readonly accordionTriggerIconElement: NodeList;
 
   private readonly accordionContentElement: Element;
 
@@ -17,11 +17,11 @@ export class Accordion {
 
     this.accordionElement = accordionElement;
     this.accordionTriggerElement = this.accordionElement
-      .querySelector<Element>(`.${accordionElementClassName}__trigger`)!;
+      .querySelectorAll<Element>(`.${accordionElementClassName}__trigger`)!;
 
     this.accordionTriggerIconClassName = `${accordionElementClassName}__arrow-icon`;
     this.accordionTriggerIconElement = this.accordionElement
-      .querySelector<Element>(`.${this.accordionTriggerIconClassName}`)!;
+      .querySelectorAll<Element>(`.${this.accordionTriggerIconClassName}`)!;
 
     this.accordionContentElement = this.accordionElement
       .querySelector<Element>(`.${accordionElementClassName}__content`)!;
@@ -30,7 +30,9 @@ export class Accordion {
   }
 
   setEventListeners() {
-    this.accordionTriggerElement.addEventListener('click', this.toggle);
+    this.accordionTriggerElement.forEach((element) => {
+      element.addEventListener('click', this.toggle);
+    });
   }
 
   isOpened(): boolean {
@@ -48,14 +50,26 @@ export class Accordion {
   }
 
   open() {
-    this.accordionTriggerElement.classList.add('accordion__title_is_selected');
-    this.accordionTriggerIconElement.classList.add(`${this.accordionTriggerIconClassName}_is_rotated`);
+    // @ts-ignore
+    this.accordionTriggerElement.forEach((element: HTMLElement) => {
+      element.classList.add('accordion__title_is_selected');
+    });
+    // @ts-ignore
+    this.accordionTriggerIconElement.forEach((element: HTMLElement) => {
+      element.classList.add(`${this.accordionTriggerIconClassName}_is_rotated`);
+    });
     this.accordionContentElement.classList.add(this.accordionContentIsVisibleClassName);
   }
 
   close() {
-    this.accordionTriggerElement.classList.remove('accordion__title_is_selected');
-    this.accordionTriggerIconElement.classList.remove(`${this.accordionTriggerIconClassName}_is_rotated`);
+    // @ts-ignore
+    this.accordionTriggerElement.forEach((element: HTMLElement) => {
+      element.classList.remove('accordion__title_is_selected');
+    });
+    // @ts-ignore
+    this.accordionTriggerIconElement.forEach((element: HTMLElement) => {
+      element.classList.remove(`${this.accordionTriggerIconClassName}_is_rotated`);
+    });
     this.accordionContentElement.classList.remove(this.accordionContentIsVisibleClassName);
   }
 }

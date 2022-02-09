@@ -1,26 +1,54 @@
 .slider {
-  width: 100%;
-  height: 100%;
   border-radius: 10px;
 }
 
 .main-slider {
+  height: calc(100vw / 2.7);
   margin-bottom: 30px;
+}
+
+@media (min-width: 1280px) {
+  .main-slider {
+    height: 370px;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider .swiper-pagination.slider__pagination {
+    bottom: 0;
+  }
+
+  .slider .swiper-pagination.slider__pagination .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
 }
 
 .slider__slide {
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
-  min-height: 120px;
-  padding: 16px;
-  background-image: url("../slider/slide-background.svg");
-  background-position: 180px center;
-  background-repeat: no-repeat;
-  background-size: cover;
   border: 1px solid var(--color-light);
   border-radius: 10px;
   color: var(--color-black);
+  background-image: url("../slider/slide-background.svg");
+  background-position: calc(100vw / 2);
+  background-repeat: no-repeat;
+}
+
+.slider__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__content {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  height: 100%;
+  width: 100%;
 }
 
 .slider__text {
@@ -32,28 +60,24 @@
   color: var(--color-black);
 }
 
-.slide__image {
+.slider__slide .slide__image {
   position: absolute;
   top: 50%;
   right: 5%;
-  max-height: 80px;
+  width: auto;
+  max-height: 70%;
   transform: translateY(-50%);
 }
 
 @media (min-width: 768px) {
-  .slider__slide {
-    min-height: 200px;
-    background-position: 400px center;
+  .slider__content {
+    padding: 16px;
   }
 
   .slider__text {
     max-width: 330px;
     font-size: 20px;
     line-height: 30px;
-  }
-
-  .slide__image {
-    max-height: 168px;
   }
 }
 
@@ -63,8 +87,7 @@
     padding-left: 330px;
   }
 
-  .slider__slide {
-    min-height: 370px;
+  .slider__content {
     padding: 30px 50% 30px 77px;
   }
 
@@ -73,7 +96,7 @@
     line-height: 40px;
   }
 
-  .slide__image {
-    max-height: 300px;
+  .slider__slide {
+    background-position: 500px center;
   }
 }
