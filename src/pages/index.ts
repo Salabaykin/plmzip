@@ -15,6 +15,21 @@ import { Choice } from '../components/search/Choice';
 import { Tooltip } from '../components/tooltip/Tooltip';
 import { Toggler } from '../components/toggler/Toggler';
 
+/* Timer */
+const timer = document.getElementById('timer');
+// @ts-ignore
+const { Soon } = window;
+if (timer && Soon) {
+  Soon.create(timer, {
+    due: timer.dataset.deadline || '2022-01-01',
+    scaleMax: 'xs',
+    scaleHide: 'none',
+    format: 'd,h,m,s',
+    face: 'slot fade faster',
+    visual: 'ring color-light cap-round progressgradient-0071bc_0071bc gap-0',
+  });
+}
+
 /* Quantity */
 formQuantity();
 

@@ -14,6 +14,10 @@
 @import "../components/accordion/accordion.css";
 @import "../components/breadcrumbs/breadcrumbs.css";
 
+/* Timer */
+@import "../components/timer/soon.min.css";
+@import "../components/timer/timer.css";
+
 /* About */
 @import "../components/about/about.css";
 
