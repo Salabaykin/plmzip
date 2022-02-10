@@ -27,12 +27,17 @@
   margin-bottom: 16px;
 }
 
+.menu-container {
+  position: relative;
+}
+
 .main__scrollable-container {
   padding: 0;
 }
 
 .main__scrollable {
   padding: 16px 0 16px 16px;
+  margin: 0 -16px;
 }
 
 @media (min-width: 768px) {
@@ -49,6 +54,20 @@
 }
 
 @media (min-width: 1280px) {
+  .main__scrollable-container {
+    padding: 0;
+    display: none;
+  }
+
+  .main__scrollable-container.active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+
   .main__title,
   .main__sub-title {
     font-size: 60px;
@@ -64,6 +83,7 @@
 
   .main__scrollable {
     padding: 0;
+    margin: 0;
   }
 
   .main__container {

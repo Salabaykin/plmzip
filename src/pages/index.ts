@@ -1,5 +1,6 @@
 import './index.css';
 
+import validate from 'validate.js';
 import { Thumbs } from 'swiper';
 import { Dropdown } from '../components/dropdown/Dropdown';
 import { Popup } from '../components/popup/Popup';
@@ -8,26 +9,183 @@ import { Accordion } from '../components/accordion/Accordion';
 import { Visibility } from '../components/visibility/Visibility';
 import { Brands } from '../components/brands/Brands';
 import { Footer } from '../components/footer/Footer';
-import { formViewPass, mask } from '../components/form/Form';
+import { formViewPass, mask, checkValue } from '../components/form/Form';
 import { formQuantity } from '../components/quantity/Quantity';
 import { Slider } from '../components/slider/Slider';
 import { Choice } from '../components/search/Choice';
 import { Tooltip } from '../components/tooltip/Tooltip';
 import { Toggler } from '../components/toggler/Toggler';
 
-/* Timer */
-const timer = document.getElementById('timer');
-// @ts-ignore
-const { Soon } = window;
-if (timer && Soon) {
-  Soon.create(timer, {
-    due: timer.dataset.deadline || '2022-01-01',
-    scaleMax: 'xs',
-    scaleHide: 'none',
-    format: 'd,h,m,s',
-    face: 'slot fade faster',
-    visual: 'ring color-light cap-round progressgradient-0071bc_0071bc gap-0',
+const constraints = {
+  email: {
+    presence: true,
+    email: true,
+  },
+  password: {
+    presence: true,
+    length: {
+      minimum: 6,
+    },
+  },
+  confirmpassword: {
+    presence: true,
+    equality: {
+      attribute: 'password',
+    },
+  },
+  surname: {
+    presence: true,
+    type: 'string',
+    length: {
+      minimum: 2,
+      maximum: 20,
+    },
+  },
+  name: {
+    presence: true,
+    type: 'string',
+    length: {
+      minimum: 2,
+      maximum: 20,
+    },
+  },
+  captcha: {
+    presence: true,
+    length: {
+      minimum: 2,
+    },
+  },
+  codeq: {
+    presence: true,
+    type: 'number',
+    numericality: {
+      noStrings: true,
+    },
+  },
+  codew: {
+    presence: true,
+    type: 'number',
+    numericality: {
+      noStrings: true,
+    },
+  },
+  codee: {
+    presence: true,
+    type: 'number',
+    numericality: {
+      noStrings: true,
+    },
+  },
+  coder: {
+    presence: true,
+    type: 'number',
+    numericality: {
+      noStrings: true,
+    },
+  },
+};
+
+const showErrorsForInput = (input: HTMLInputElement, errors: any) => {
+  const keys = Object.keys(errors);
+  const isContainInputName = keys.includes(input.name);
+  checkValue(input, !isContainInputName);
+};
+
+const form = document.querySelector('#sign-up');
+if (form) {
+  const policy = form.querySelector('input[name="confirm"]');
+  const inputs = form.querySelectorAll('input');
+  inputs.forEach((input: any) => {
+    input.addEventListener('change', () => {
+      const errors = validate(form, constraints) || {};
+      showErrorsForInput(input, errors);
+    });
   });
+  if (policy) {
+    policy.addEventListener('change', () => {
+      const parent = policy.closest('.sign-up__content');
+      // @ts-ignore
+      const { checked } = policy;
+      if (parent) {
+        if (checked) {
+          parent.classList.add('success');
+        } else {
+          parent.classList.remove('success');
+        }
+      }
+    });
+  }
+}
+
+/* Input Mask */
+// const smsCode = document.querySelectorAll('.code');
+const phoneMaskOptions = {
+  selector: '#phone',
+  inputMask: '+7(999)999-99-99',
+  placeholder: '+7(___)___-__-__',
+};
+mask(phoneMaskOptions);
+// const captchaMaskOptions = {
+//   selector: '#captcha',
+//   inputMask: '*{4,10}',
+// };
+//
+// if (smsCode.length) {
+//   smsCode.forEach((_codeElement, index) => {
+//     const smsMaskOptions = {
+//       selector: `#code-${index + 1}`,
+//       inputMask: '9',
+//     };
+//     mask(smsMaskOptions);
+//   });
+// }
+//
+// mask(captchaMaskOptions);
+
+/* Menu */
+const menuBlock = document.querySelector('[data-menu]');
+if (menuBlock) {
+  const menuIsOpen = menuBlock.classList.contains('active');
+  const hideMenu = () => menuBlock.classList.remove('active');
+  if (!menuIsOpen) {
+    document.addEventListener('click', (event: MouseEvent) => {
+      const target = (event.target as HTMLElement);
+      const isMenu = target.closest('.main__scrollable-container');
+      const isMenuTrigger = target.closest('[data-menu-trigger]');
+      if (isMenuTrigger && !menuIsOpen) {
+        menuBlock.classList.toggle('active');
+      } else if (!isMenu) {
+        hideMenu();
+      }
+    });
+    document.addEventListener('keydown', (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        hideMenu();
+      }
+    });
+  }
+}
+
+/* Timer */
+const sale = document.querySelector('.sale');
+if (sale && !sale.classList.contains('hidden')) {
+  const timer = document.getElementById('timer');
+  const hideTimer = document.querySelector('[data-hide-timer]');
+  // @ts-ignore
+  const { Soon } = window;
+  if (timer && Soon) {
+    Soon.create(timer, {
+      due: timer.dataset.deadline || '2022-01-01',
+      scaleMax: 'xs',
+      scaleHide: 'none',
+      format: 'd,h,m,s',
+      face: 'slot fade faster',
+      visual: 'ring color-light cap-round progressgradient-0071bc_0071bc gap-0',
+    });
+    if (hideTimer) {
+      hideTimer.addEventListener('click', () => sale.classList.add('hidden'));
+    }
+  }
 }
 
 /* Quantity */
@@ -56,31 +214,6 @@ if (searchSelectParams.length) {
     });
   });
 }
-
-/* Input Mask */
-const smsCode = document.querySelectorAll('.code');
-const phoneMaskOptions = {
-  selector: '#phone',
-  inputMask: '+7(999)999-99-99',
-  placeholder: '+7(___)___-__-__',
-};
-const captchaMaskOptions = {
-  selector: '#captcha',
-  inputMask: '*{4,10}',
-};
-
-if (smsCode.length) {
-  smsCode.forEach((_codeElement, index) => {
-    const smsMaskOptions = {
-      selector: `#code-${index + 1}`,
-      inputMask: '9',
-    };
-    mask(smsMaskOptions);
-  });
-}
-
-mask(phoneMaskOptions);
-mask(captchaMaskOptions);
 
 /* Tooltip */
 Tooltip('[data-tippy-content]', {
@@ -167,6 +300,10 @@ const mainPageSlider: HTMLElement | null = document.querySelector('.slider');
 if (mainPageSlider) {
   Slider(mainPageSlider, {
     spaceBetween: 10,
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

@@ -76,8 +76,13 @@
 }
 
 #timer .soon-label {
-  font-size: 12px;
   text-transform: uppercase;
   color: #303030;
   opacity: 0.5;
+}
+
+@media (min-width: 1280px) {
+  #timer .soon-label {
+    font-size: 10px !important;
+  }
 }

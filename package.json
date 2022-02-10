@@ -27,6 +27,7 @@
     "choices.js": "^10.0.0",
     "inputmask": "^5.0.7",
     "swiper": "^7.3.3",
-    "tippy.js": "^6.3.7"
+    "tippy.js": "^6.3.7",
+    "validate.js": "^0.13.1"
   }
 }

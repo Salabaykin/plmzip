@@ -1,8 +1,8 @@
-import Swiper, { Pagination, Thumbs } from 'swiper';
+import Swiper, { Pagination, Thumbs, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-Swiper.use([Pagination, Thumbs]);
+Swiper.use([Pagination, Thumbs, Autoplay]);
 
 interface Options {
   [propName: string]: any

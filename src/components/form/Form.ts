@@ -7,20 +7,18 @@ interface Mask {
 }
 
 // @ts-ignore
-const checkValue = (input, inputMask) => {
+export const checkValue = (input: HTMLInputElement, isValid: boolean, inputMask: string = '') => {
+  const inputContainer = input.closest('.sign-up__content');
   const { value } = input;
-  const isValid = Inputmask.isValid(value, { mask: inputMask });
-
-  if (isValid) {
-    input
-      .closest('.input-field')
-      .classList
-      .remove('error');
-  } else {
-    input
-      .closest('.input-field')
-      .classList
-      .add('error');
+  const valid = inputMask !== '' ? Inputmask.isValid(value, { mask: inputMask }) : isValid;
+  if (inputContainer) {
+    if (valid) {
+      inputContainer.classList.remove('error');
+      inputContainer.classList.add('success');
+    } else {
+      inputContainer.classList.add('error');
+      inputContainer.classList.remove('success');
+    }
   }
 };
 
@@ -29,7 +27,7 @@ export const mask = ({
   inputMask,
   placeholder = '',
 }: Mask) => {
-  const element: HTMLElement | null = document.querySelector(selector);
+  const element: HTMLInputElement | null = document.querySelector(selector);
 
   if (element) {
     Inputmask({
@@ -37,10 +35,10 @@ export const mask = ({
       showMaskOnHover: false,
       placeholder,
       onincomplete() {
-        checkValue(this, inputMask);
+        checkValue(element, false, inputMask);
       },
       oncomplete() {
-        checkValue(this, inputMask);
+        checkValue(element, false, inputMask);
       },
     }).mask(element);
   }

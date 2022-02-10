@@ -247,19 +247,18 @@
   }
 }
 
-.input-field.error .error-info {
+.sign-up__content.error .error-info {
   display: block;
 }
 
-.error-info.sms-error {
-  display: block;
+.sign-up__content .error-info.sms-error {
   top: auto;
   right: 0;
   bottom: 0;
   transform: translateY(0);
 }
 
-.input-field.error input {
+.sign-up__content.error input {
   border-color: var(--color-danger);
 }
 
@@ -283,6 +282,18 @@
   padding: 8px 10px;
   font-weight: 600;
   font-size: 14px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.sign-up__content.error .form__button {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.sign-up__content.success .form__button {
+  pointer-events: auto;
+  opacity: 1;
 }
 
 @media (min-width: 768px) {

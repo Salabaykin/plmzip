@@ -4,12 +4,20 @@
 
 .main-slider {
   height: calc(100vw / 2.7);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .main-slider {
+    margin-bottom: 16px;
+  }
 }
 
 @media (min-width: 1280px) {
   .main-slider {
     height: 370px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -83,7 +91,6 @@
 
 @media (min-width: 1280px) {
   .main-slider {
-    margin-top: -370px;
     padding-left: 330px;
   }
 
