@@ -34,16 +34,6 @@
 }
 
 @media (min-width: 768px) {
-  .catalog__list {
-    display: flex;
-
-    /* Put a card in the next row when previous cards take all width */
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    margin-bottom: -16px;
-  }
-
   .catalog__item {
     border-width: 2px;
     height: 100px;

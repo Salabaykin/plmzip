@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/png" href="favicon.svg">
-  <title>Каталог</title>
+  <title>Мой профиль</title>
 </head>
   <body class="page">
     <!-- Header desktop: is not logged in -->
@@ -235,27 +235,60 @@
             <form class="form profile-form" name="user-information" novalidate>
               <div class="profile-form__wrapper">
                 <section class="form__section">
-                  <label class="form__label required" for="org-name">Организация:</label>
-                  <input class="form__input" type="text" name="org-name" id="org-name">
+                  <label class="form__label required" for="user-surname">Фамилия:</label>
+                  <input class="form__input" type="text" name="user-surname" id="user-surname" autocomplete="user-surname">
                 </section>
                 <section class="form__section">
-                  <label class="form__label required" for="bank-name">Наименование банка:</label>
-                  <input class="form__input" type="text" name="bank-name" id="bank-name">
+                  <label class="form__label required" for="user-name">Имя:</label>
+                  <input class="form__input" type="text" name="user-surname" id="user-name" autocomplete="user-name">
+                </section>
+                <section class="form__section">
+                  <label class="form__label required" for="user-otc">Отчество:</label>
+                  <input class="form__input" type="text" name="user-otc" id="user-otc" autocomplete="user-otc">
                 </section>
                 <section class="form__section">
                   <label class="form__label required" for="user-phone">Телефон:</label>
-                  <input class="form__input" type="tel" name="" id="user-phone">
+                  <input class="form__input" type="text" name="user-phone" id="user-phone" autocomplete="user-phone">
                 </section>
                 <section class="form__section">
-                  <label class="form__label required" for="user-surname">Фамилия:</label>
-                  <input class="form__input" type="text" name="user-surname" id="user-surname">
+                  <label class="form__label required" for="user-email">E-Mail:</label>
+                  <input class="form__input" type="text" name="user-email" id="user-email" autocomplete="user-email">
                 </section>
                 <section class="form__section">
                   <label class="form__label" for="user-password">Пароль:</label>
                   <input class="form__input form__input_type_password" type="password" name="user-password" id="user-password" minlength="6">
-                  <button class="form__toggle-password" type="button">
-                  </button>
+                  <button class="form__toggle-password" type="button"></button>
                 </section>
+              </div>
+              <div class="profile-form__wrapper profile-form__wrapper--address-block">
+                <section class="form__section">
+                  <label class="form__label required" for="user-address">Адрес:</label>
+                  <input class="form__input" type="text" value="г. Москва, ул. Новая весна, д-85" name="user-address" id="user-address" autocomplete="user-address">
+                  <label class="user-address-radio">
+                    <input type="radio" name="user-address" checked/>
+                    <span class="radio"></span>
+                  </label>
+                </section>
+                <section class="form__section">
+                  <label class="form__label required" for="user-additional-address">Дополнительный адрес:</label>
+                  <input class="form__input" type="text" name="user-additional-address" id="user-additional-address" autocomplete="user-additional-address">
+                  <label class="user-address-radio">
+                    <input type="radio" name="user-address" />
+                    <span class="radio"></span>
+                  </label>
+                </section>
+                <section class="form__section">
+                  <label class="form__label required" for="user-additional-address-2">Дополнительный адрес:</label>
+                  <input class="form__input" type="text" name="user-additional-address-2" id="user-additional-address-2" autocomplete="user-additional-address-2">
+                  <label class="user-address-radio">
+                    <input type="radio" name="user-address" />
+                    <span class="radio"></span>
+                  </label>
+                </section>
+              </div>
+              <div class="profile-form__wrapper profile-form__wrapper--save-block">
+                <section></section>
+                <section></section>
                 <section class="form__section">
                   <button class="button profile-form__button" type="submit">Сохранить изменения</button>
                 </section>

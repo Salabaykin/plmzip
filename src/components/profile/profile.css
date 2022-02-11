@@ -14,6 +14,27 @@
   gap: 10px;
 }
 
+.profile-form__wrapper.profile-form__wrapper--save-block {
+  margin-top: 10px;
+  gap: 0;
+}
+
+@media (min-width: 768px) {
+  .profile-form__wrapper.profile-form__wrapper--save-block {
+    grid-template-columns: 1fr;
+    margin-top: 16px;
+    gap: 16px 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .profile-form__wrapper.profile-form__wrapper--save-block {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 30px;
+    gap: 30px 30px;
+  }
+}
+
 @media (min-width: 768px) {
   .profile-form__wrapper {
     grid-template-columns: 1fr 1fr;
@@ -60,5 +81,92 @@
     padding: 15px;
     font-size: 20px;
     line-height: 26px;
+  }
+}
+
+.profile-form__wrapper--address-block {
+  margin-top: 10px;
+}
+
+.profile-form__wrapper--address-block .form__section {
+  position: relative;
+}
+
+.profile-form__wrapper--address-block .form__input {
+  padding-right: 35px;
+}
+
+@media (min-width: 768px) {
+  .profile-form__wrapper--address-block {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .profile-form__wrapper--address-block .form__input {
+    padding-right: 55px;
+  }
+
+  .profile-form__wrapper--address-block {
+    margin-top: 30px;
+  }
+}
+
+.user-address-radio {
+  position: absolute;
+  bottom: 9px;
+  right: 9px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .user-address-radio {
+    bottom: 13px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .user-address-radio {
+    bottom: 13px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.user-address-radio input {
+  position: absolute;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  left: -2000px;
+}
+
+.user-address-radio .radio {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: var(--color-light);
+  border-radius: 5px;
+}
+
+@media (min-width: 1280px) {
+  .user-address-radio .radio {
+    border-radius: 10px;
+  }
+}
+
+.user-address-radio input:checked ~ .radio {
+  background: #33f540 url("./checked.svg") 50% no-repeat;
+  background-size: 10px;
+}
+
+@media (min-width: 1280px) {
+  .user-address-radio input:checked ~ .radio {
+    background: #33f540 url("./checked.svg") 50% no-repeat;
+    background-size: 18px;
   }
 }

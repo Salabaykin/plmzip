@@ -1,14 +1,3 @@
-.delivery-page__descr {
-  margin-bottom: 16px;
-  font-weight: normal;
-}
-
-@media (min-width: 1280px) {
-  .delivery-page__descr {
-    margin-bottom: 100px;
-  }
-}
-
 .delivery__p-list {
   padding-bottom: 10px;
   border-bottom: 1px solid rgb(0 113 188 / 10%);
