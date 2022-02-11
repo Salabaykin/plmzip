@@ -3,12 +3,13 @@ import Inputmask from 'inputmask';
 interface Mask {
   selector: string,
   inputMask?: string,
-  placeholder?: string
+  placeholder?: string,
+  container?: string
 }
 
 // @ts-ignore
-export const checkValue = (input: HTMLInputElement, isValid: boolean, inputMask: string = '') => {
-  const inputContainer = input.closest('.sign-up__content');
+export const checkValue = (input: HTMLInputElement, isValid: boolean, container: string, inputMask: string = '') => {
+  const inputContainer = input.closest(container);
   const { value } = input;
   const valid = inputMask !== '' ? Inputmask.isValid(value, { mask: inputMask }) : isValid;
   if (inputContainer) {
@@ -26,6 +27,7 @@ export const mask = ({
   selector,
   inputMask,
   placeholder = '',
+  container = '',
 }: Mask) => {
   const element: HTMLInputElement | null = document.querySelector(selector);
 
@@ -35,10 +37,10 @@ export const mask = ({
       showMaskOnHover: false,
       placeholder,
       onincomplete() {
-        checkValue(element, false, inputMask);
+        checkValue(element, false, container, inputMask);
       },
       oncomplete() {
-        checkValue(element, false, inputMask);
+        checkValue(element, false, container, inputMask);
       },
     }).mask(element);
   }

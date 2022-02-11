@@ -49,7 +49,22 @@ const constraints = {
       maximum: 20,
     },
   },
+  activity: {
+    presence: true,
+  },
   captcha: {
+    presence: true,
+    length: {
+      minimum: 2,
+    },
+  },
+  company: {
+    presence: true,
+    length: {
+      minimum: 2,
+    },
+  },
+  city: {
     presence: true,
     length: {
       minimum: 2,
@@ -85,62 +100,73 @@ const constraints = {
   },
 };
 
-const showErrorsForInput = (input: HTMLInputElement, errors: any) => {
+const showErrorsForInput = (input: HTMLInputElement, errors: any, container: string) => {
   const keys = Object.keys(errors);
   const isContainInputName = keys.includes(input.name);
-  checkValue(input, !isContainInputName);
+  checkValue(input, !isContainInputName, container);
+};
+
+const checkValid = (form: Element, container: string) => {
+  if (form && container) {
+    const policy = form.querySelector('input[name="confirm"]');
+    const inputs = form.querySelectorAll('input');
+    inputs.forEach((input: any) => {
+      input.addEventListener('change', () => {
+        const errors = validate(form, constraints) || {};
+        showErrorsForInput(input, errors, container);
+      });
+    });
+    if (policy) {
+      policy.addEventListener('change', () => {
+        const parent = policy.closest('.sign-up__content');
+        // @ts-ignore
+        const { checked } = policy;
+        if (parent) {
+          if (checked) {
+            parent.classList.add('success');
+          } else {
+            parent.classList.remove('success');
+          }
+        }
+      });
+    }
+  }
 };
 
 const form = document.querySelector('#sign-up');
-if (form) {
-  const policy = form.querySelector('input[name="confirm"]');
-  const inputs = form.querySelectorAll('input');
-  inputs.forEach((input: any) => {
-    input.addEventListener('change', () => {
-      const errors = validate(form, constraints) || {};
-      showErrorsForInput(input, errors);
-    });
-  });
-  if (policy) {
-    policy.addEventListener('change', () => {
-      const parent = policy.closest('.sign-up__content');
-      // @ts-ignore
-      const { checked } = policy;
-      if (parent) {
-        if (checked) {
-          parent.classList.add('success');
-        } else {
-          parent.classList.remove('success');
-        }
-      }
-    });
-  }
-}
+const requestForm = document.querySelector('#request-form');
+if (form) checkValid(form, '.sign-up__content');
+if (requestForm) checkValid(requestForm, '.form__section');
 
 /* Input Mask */
-// const smsCode = document.querySelectorAll('.code');
 const phoneMaskOptions = {
   selector: '#phone',
   inputMask: '+7(999)999-99-99',
   placeholder: '+7(___)___-__-__',
+  container: '.sign-up__content',
 };
 mask(phoneMaskOptions);
-// const captchaMaskOptions = {
-//   selector: '#captcha',
-//   inputMask: '*{4,10}',
-// };
-//
-// if (smsCode.length) {
-//   smsCode.forEach((_codeElement, index) => {
-//     const smsMaskOptions = {
-//       selector: `#code-${index + 1}`,
-//       inputMask: '9',
-//     };
-//     mask(smsMaskOptions);
-//   });
-// }
-//
-// mask(captchaMaskOptions);
+const requestMaskOptions = {
+  selector: '#phone',
+  inputMask: '+7(999)999-99-99',
+  placeholder: '+7(___)___-__-__',
+  container: '.form__section',
+};
+mask(requestMaskOptions);
+
+/* Basket */
+const selectAll = document.querySelector('input[name="select-all"]');
+const orderList = document.querySelectorAll('input[name="order"]');
+if (selectAll && orderList.length) {
+  selectAll.addEventListener('click', (event: Event) => {
+    const target = (event.target as HTMLInputElement);
+
+    orderList.forEach((input: Element) => {
+      const inp = input as HTMLInputElement;
+      inp.checked = target.checked;
+    });
+  });
+}
 
 /* Menu */
 const menuBlock = document.querySelector('[data-menu]');
@@ -201,9 +227,8 @@ if (toggler.length) {
 formViewPass();
 
 /* Custom Select */
-const searchSelectParams = document.querySelectorAll('.search-param');
-if (searchSelectParams.length) {
-  searchSelectParams.forEach((select: Element) => {
+const customSelectInit = (selectList: any) => {
+  selectList.forEach((select: Element) => {
     Choice(select, {
       allowHTML: true,
       searchEnabled: false,
@@ -213,7 +238,11 @@ if (searchSelectParams.length) {
       },
     });
   });
-}
+};
+const searchSelectParams = document.querySelectorAll('.search-param');
+const requestSelectParams = document.querySelectorAll('.activity');
+if (searchSelectParams.length) customSelectInit(searchSelectParams);
+if (requestSelectParams.length) customSelectInit(requestSelectParams);
 
 /* Tooltip */
 Tooltip('[data-tippy-content]', {

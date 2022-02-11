@@ -359,16 +359,9 @@
 }
 
 .card-page__schemes {
-  margin-top: 10px;
-  padding-top: 10px;
+  margin-top: 16px;
+  padding-top: 16px;
   border-top: 1px solid rgb(0 113 188 / 10%);
-}
-
-@media (min-width: 1280px) {
-  .card-page__schemes {
-    margin-top: 16px;
-    padding-top: 16px;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -381,11 +374,26 @@
 
 .card-page__subtitle {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 600;
-  font-size: 30px;
-  line-height: 38px;
+  font-size: 15px;
+  line-height: 19px;
   color: var(--color-black);
+}
+
+@media (min-width: 768px) {
+  .card-page__subtitle {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .card-page__subtitle {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 38px;
+  }
 }
 
 .card-page__scheme-list {
