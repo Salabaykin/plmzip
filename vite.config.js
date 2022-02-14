@@ -28,6 +28,7 @@ module.exports = defineConfig({
         'search-by-scheme-second-level': resolve(__dirname, 'src/pages/search/search-by-scheme/search-by-scheme-second-level/index.html'),
         'search-by-scheme-third-level': resolve(__dirname, 'src/pages/search/search-by-scheme/search-by-scheme-third-level/index.html'),
         'catalog-second-level': resolve(__dirname, 'src/pages/catalog/catalog-second-level/index.html'),
+        'catalog-third-level': resolve(__dirname, 'src/pages/catalog/catalog-third-level/index.html'),
         'search-by-scheme': resolve(__dirname, 'src/pages/search/search-by-scheme/index.html'),
         'order-details': resolve(__dirname, 'src/pages/basket/order-details/index.html'),
         'card-page': resolve(__dirname, 'src/pages/card-page/index.html'),
