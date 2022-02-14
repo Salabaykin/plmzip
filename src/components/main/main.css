@@ -66,6 +66,7 @@
     left: 0;
     padding: 0;
     background-color: #fff;
+    z-index: 1;
   }
 
   .main__title,

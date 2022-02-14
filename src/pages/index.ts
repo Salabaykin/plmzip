@@ -1,3 +1,4 @@
+/* eslint-disable */
 import './index.css';
 
 import validate from 'validate.js';
@@ -279,14 +280,65 @@ if (tooltipList.length) {
 }
 
 /* Copy Field */
+class CopyField {
+  inputValue: string = '';
+  inputEl: any;
+
+  constructor(input: HTMLInputElement) {
+    this.inputEl = input;
+    this.inputValue = input.value;
+  }
+
+  copy() {
+    if ((navigator as any).clipboard) {
+      (navigator as any).clipboard.writeText(this.inputValue);
+    } else if ((window as any).clipboardData) {
+      (window as any).clipboardData.setData('text', this.inputValue);
+    } else {
+      this.copyToClipboard(this.inputEl.nativeElement);
+    }
+  }
+
+  copyToClipboard(el: HTMLInputElement) {
+    const oldContentEditable = el.contentEditable;
+    const oldReadOnly = el.readOnly;
+
+    if (el) {
+      try {
+        el.contentEditable = 'true';
+        el.readOnly = false;
+        this.copyNodeContentsToClipboard(el);
+      } finally {
+        el.contentEditable = oldContentEditable;
+        el.readOnly = oldReadOnly;
+      }
+    }
+  }
+
+  copyNodeContentsToClipboard(el: HTMLInputElement) {
+    const range = document.createRange();
+    const selection = window.getSelection();
+    range.selectNodeContents(el);
+
+    if (selection) {
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+
+    el.setSelectionRange(0, 999999);
+    document.execCommand('copy');
+  }
+}
+
 const copyValue = () => {
   const fields = document.querySelectorAll('[data-copy]');
   if (fields.length) {
     fields.forEach((item: Element) => {
       const input = item.parentElement?.querySelector('input');
-      if (input?.value) {
+      if (input) {
         item.addEventListener('click', () => {
-          navigator.clipboard.writeText(input.value);
+          const copy = new CopyField(input);
+          copy.copy();
         });
       }
     });

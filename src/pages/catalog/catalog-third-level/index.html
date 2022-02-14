@@ -49,7 +49,7 @@
       </div>
       <div class="header__column">
         <div class="container header__container">
-          <a class="header__catalog" href="#">
+          <a class="header__catalog" href="#" data-menu-trigger>
             <svg class="header__catalog-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="3" y1="12" x2="21" y2="12"/>
@@ -198,6 +198,1021 @@
     </header>
 
     <main class="page__main main">
+      <section class="container">
+        <div class="menu-container">
+          <div class="main__scrollable-container" data-menu>
+            <ul class="main__scrollable list list_type_inline">
+              <li class="list__item">
+                <a class="list__item-link" href="">
+                  <svg class="list__item-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M6.26727 1.65821C6.46774 0.329315 6.49969 0.24957 6.90284 0.0717277C7.06003 0.00239093 7.13002 0 8.99866 0C10.8673 0 10.9373 0.00239093 11.0945 0.0717277C11.4999 0.25059 11.5362 0.340039 11.7299 1.64046C11.8176 2.22922 11.8894 2.72214 11.8894 2.73581C11.8894 2.74953 12.0155 2.82129 12.1695 2.8953C12.3235 2.96932 12.5877 3.11791 12.7567 3.2255C12.9256 3.33309 13.0882 3.41916 13.118 3.41681C13.1478 3.41442 13.6194 3.23692 14.1659 3.02234C14.7125 2.80779 15.2328 2.62334 15.3222 2.61247C15.5477 2.58515 15.7709 2.65227 15.9353 2.79685C16.0332 2.88293 16.3492 3.38207 16.9995 4.47806C17.5082 5.33538 17.9424 6.08722 17.9645 6.14879C18.0339 6.34259 17.9883 6.65879 17.8667 6.82721C17.8026 6.91603 17.4138 7.23856 16.8934 7.63468L16.0269 8.29429L16.0228 8.99585L16.0187 9.69745L16.872 10.347C17.8117 11.0626 17.8594 11.1047 17.9403 11.2932C18.0416 11.529 18.0145 11.7758 17.8555 12.0657C17.4963 12.7209 16.11 15.0106 15.9921 15.1435C15.836 15.3195 15.5523 15.4202 15.3077 15.3865C15.2263 15.3753 14.7125 15.1907 14.1659 14.9764C13.6194 14.762 13.1478 14.5847 13.118 14.5824C13.0882 14.58 12.9237 14.6666 12.7523 14.7747C12.5811 14.8829 12.3209 15.0298 12.1742 15.1013C12.0275 15.1728 11.9048 15.2334 11.9014 15.236C11.8981 15.2386 11.8279 15.6995 11.7455 16.2603C11.6631 16.8211 11.579 17.3452 11.5587 17.4251C11.5079 17.6248 11.3336 17.818 11.1151 17.917L10.9319 18L8.99866 17.9996C7.13049 17.9992 7.05999 17.9967 6.90284 17.9274C6.49947 17.7495 6.46764 17.6699 6.26839 16.3418C6.17765 15.737 6.10033 15.2396 6.0966 15.2367C6.09288 15.2337 5.96981 15.1728 5.82314 15.1013C5.67643 15.0298 5.41626 14.8829 5.24498 14.7747C5.07366 14.6666 4.90911 14.58 4.8793 14.5824C4.84948 14.5847 4.37793 14.762 3.83139 14.9764C3.28485 15.1907 2.76881 15.3755 2.68461 15.3871C2.47015 15.4167 2.22885 15.3413 2.05959 15.1918C1.85984 15.0154 0.0492687 11.9671 0.0159886 11.7512C-0.0184117 11.5282 0.0282744 11.3076 0.142243 11.1545C0.198036 11.0795 0.634471 10.7215 1.11206 10.3588L1.98038 9.69942L1.97543 8.99684L1.97045 8.29429L1.10393 7.63468C0.583521 7.23852 0.194747 6.91603 0.130608 6.82721C0.00962882 6.65971 -0.0366959 6.34284 0.0318156 6.15153C0.0850782 6.00294 1.86725 3.0074 1.97995 2.87706C2.12189 2.71293 2.33566 2.622 2.58474 2.61982C2.77936 2.61813 2.90666 2.65902 3.82799 3.01935C4.39252 3.24012 4.87221 3.42046 4.89397 3.42015C4.91572 3.41979 5.08797 3.32444 5.27678 3.20823C5.46558 3.09203 5.72575 2.94541 5.85493 2.8824C5.98412 2.81936 6.09238 2.76574 6.09552 2.76317C6.09866 2.76064 6.17596 2.2634 6.26727 1.65821ZM10.7151 6.51492C10.418 6.32006 10.3138 6.27129 9.92841 6.14675C9.63517 6.05199 9.53595 6.03757 9.10706 6.02741C8.58607 6.01507 8.55503 6.01774 8.22176 6.10343C6.4319 6.56351 5.4606 8.44313 6.14687 10.1185C6.50052 10.9818 7.22766 11.6075 8.22176 11.9038C8.39221 11.9547 8.55832 11.9685 8.99866 11.9688C9.4846 11.969 9.59441 11.9582 9.82817 11.8871C10.5935 11.6543 11.1391 11.2648 11.5624 10.6491C12.2449 9.65634 12.2449 8.34281 11.5624 7.35002C11.3321 7.01501 11.0429 6.73003 10.7151 6.51492Z"
+                          fill="#0071BC"/>
+                  </svg>
+                  <span class="list__item-text">Запчасти</span>
+                </a>
+                <ul class="list__item-submenu">
+                  <li class="list__item-column">
+                    <ul class="accordion">
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Детали системы охлаждения, термостаты
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Детали системы охлаждения, термостаты
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Детали трима (гидроподъемник)
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list__item-column">
+                    <ul class="accordion">
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Румпель
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Сальники и уплотнения
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Система зажигания
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Система запуска
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Система топливная
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Электрооборудование
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="list__item">
+                <a class="list__item-link" href="#">
+                  <svg class="list__item-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M3.00935 0.0336835C2.67766 0.0802257 2.21605 0.231532 1.89099 0.400217C-0.228075 1.50006 -0.649639 4.27863 1.05212 5.929C2.13565 6.97981 4.40269 8.13091 5.86014 8.37034L6.13369 8.41526L6.17546 8.66996L6.21727 8.92463L5.73854 9.39371C5.08821 10.0309 4.59656 10.669 4.06986 11.5593C3.76012 12.0829 3.70349 12.1929 3.47114 12.7222C3.10338 13.5599 3.00963 13.9855 3.03648 14.6955C3.0508 15.0738 3.07442 15.24 3.14848 15.4838C3.5573 16.8292 4.68275 17.783 6.08139 17.9695C7.22352 18.1217 8.396 17.6973 9.16095 16.8547C9.63156 16.3364 9.89122 15.806 10.0333 15.0728C10.1242 14.6036 10.1226 12.9324 10.0307 12.2902C9.89222 11.3228 9.6613 10.4222 9.41142 9.87503C9.30972 9.65231 9.3143 9.61692 9.4689 9.43237L9.53477 9.35374L9.7979 9.46072C11.1556 10.0127 13.5879 10.2384 15.0903 9.95176C16.561 9.6712 17.6173 8.66145 17.9429 7.2249C18.0116 6.92134 18.0201 6.21237 17.9585 5.9227C17.6478 4.46234 16.5942 3.42691 15.1082 3.12148C14.9901 3.0972 14.7002 3.07838 14.4639 3.07965C13.7618 3.08341 13.3086 3.21052 12.352 3.67203C10.8159 4.41312 9.35654 5.53548 8.72611 6.46063C8.53689 6.73827 8.49534 6.70587 8.44322 6.2402C8.22673 4.30569 6.88475 1.63019 5.67024 0.71173C4.93672 0.157022 3.94028 -0.0969022 3.00935 0.0336835ZM8.50905 6.78027C8.83353 6.88999 9.0099 6.99469 9.21991 7.20235C9.57482 7.55319 9.72377 7.90815 9.72369 8.40285C9.72362 8.85831 9.57396 9.21746 9.2426 9.55726C8.92291 9.88509 8.49974 10.0588 8.02072 10.0588C7.5358 10.0588 7.1695 9.9081 6.81677 9.56352C6.27107 9.03034 6.16465 8.2724 6.53524 7.55844C6.63869 7.35918 6.97639 7.02737 7.18114 6.9238C7.60671 6.70854 8.12972 6.65201 8.50905 6.78027ZM7.79278 7.74235C7.62142 7.79896 7.45197 7.97109 7.37783 8.16391C7.16564 8.71566 7.75791 9.25095 8.30855 9.00512C8.80318 8.78433 8.85354 8.1154 8.39783 7.81901C8.24262 7.71808 7.97054 7.6836 7.79278 7.74235Z"
+                          fill="#0071BC"/>
+                  </svg>
+                  <span class="list__item-text">Гребные винты</span>
+                </a>
+                <ul class="list__item-submenu">
+                  <li class="list__item-column">
+                    <ul class="accordion">
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Детали системы охлаждения, термостаты
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Детали системы охлаждения, термостаты
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Детали трима (гидроподъемник)
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list__item-column">
+                    <ul class="accordion">
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Румпель
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Сальники и уплотнения
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Система зажигания
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Система запуска
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Система топливная
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <!-- Each accordion item -->
+                      <li class="js-accordion-item accordion__item">
+                        <!-- Heading -->
+                        <div class="accordion__header accordion__trigger">
+                          <!-- The title -->
+                          <p class="accordion__title">
+                            Электрооборудование
+                          </p>
+
+                          <!-- The toggle icon -->
+                          <div class="accordion__toggle">
+                            <svg class="accordion__arrow-icon" width="19"
+                                 height="19" viewBox="0 0 19 19"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_1321_900)">
+                                <path
+                                  d="M9.14673 8.32178L9.5 7.96907L9.85327 8.32178L13.2954 11.7584L15.4293 13.8889C15.9568 14.4156 16.8113 14.4156 17.3388 13.8888C17.8652 13.363 17.8652 12.5097 17.3386 11.984L13.8967 8.54754L9.5 4.15772L5.10328 8.54754L1.6614 11.984C1.13485 12.5097 1.13477 13.363 1.66123 13.8888C2.1887 14.4156 3.04317 14.4156 3.57073 13.8889L5.70463 11.7584L9.14673 8.32178Z"
+                                  fill="#0071BC" stroke="white"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_1321_900">
+                                  <rect width="19" height="19" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- The content -->
+                        <div class="accordion__content">
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Корпус помпы (175)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Крыльчатки, шпонки (263)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Пластины помпы (94)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Прокладки, уплотнения, помпы охлаждения (112)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Стакан помпы (77)</a>
+                            </li>
+                            <li class="accordion__list-item">
+                              <a class="accordion__list-link" href="#">Термостат (86)</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="list__item">
+                <a class="list__item-link" href="#">
+                  <svg class="list__item-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M3.05604 0.0510726C2.89165 0.0781565 2.7176 0.115441 2.66925 0.133978C2.53138 0.186739 2.39168 0.348011 2.35012 0.50239C2.2779 0.770662 2.32909 0.838864 3.42485 1.93432L4.42737 2.93657V3.68423C4.42737 4.09647 4.09318 4.43192 3.68094 4.43192H2.93452L1.91404 3.41497C0.766201 2.27111 0.743451 2.25507 0.435711 2.37266C0.201073 2.46228 0.115242 2.61174 0.0501216 3.04388C-0.0159835 3.48257 -0.0166164 3.79422 0.0477306 4.22102C0.270167 5.69706 1.23027 6.79308 2.68683 7.23363C2.979 7.32202 3.05185 7.32955 3.63622 7.33156C4.1998 7.33352 4.30497 7.32435 4.59611 7.2476C4.79856 7.19424 5.01412 7.25249 5.16214 7.40056L7.88202 10.1213L10.6018 12.8421C10.7499 12.9902 10.8082 13.2058 10.7548 13.4083C10.6781 13.6996 10.6689 13.8048 10.6709 14.3686C10.6729 14.9531 10.6804 15.026 10.7688 15.3183C11.1843 16.693 12.1618 17.6118 13.545 17.928C13.8953 18.008 14.7584 18.0079 15.1159 17.9278C15.4216 17.8592 15.5943 17.7201 15.6432 17.5031C15.7059 17.2252 15.6772 17.1869 14.5861 16.0913L13.5696 15.0705V14.3238C13.5696 13.9119 13.9035 13.5772 14.3155 13.5772H15.0614L16.0999 14.6109C17.0447 15.5513 17.1515 15.6468 17.282 15.6682C17.4641 15.6981 17.6929 15.6115 17.7891 15.4765C17.978 15.2111 18.0468 14.1655 17.9154 13.5596C17.5939 12.0781 16.4757 10.9879 14.9917 10.709C14.5337 10.6229 13.7642 10.652 13.37 10.7704C13.1931 10.8235 13.0012 10.775 12.8707 10.6442L10.1145 7.88171L7.35402 5.11491C7.22615 4.98674 7.17911 4.79865 7.23159 4.62538C7.33894 4.27093 7.37857 3.52074 7.3119 3.10459C7.09984 1.78051 6.21509 0.691379 4.9874 0.243193C4.828 0.185015 4.58539 0.113506 4.44822 0.084312C4.08921 0.00787897 3.41585 -0.00819553 3.05604 0.0510726ZM15.0184 0.788213C13.4181 1.58765 13.2839 1.66946 13.2349 1.87572C13.2249 1.91775 13.1391 2.497 13.0441 3.16291C12.932 3.94881 12.5681 4.67718 12.007 5.2387L11.6824 5.56354L10.871 6.37542C10.6623 6.5842 10.6624 6.92257 10.8711 7.13131C11.0797 7.34003 11.418 7.34006 11.6267 7.13138L12.4383 6.31974L12.7633 5.99475C13.3245 5.43361 14.0525 5.06966 14.8381 4.95756C15.5038 4.86255 16.0829 4.77666 16.1249 4.76667C16.3311 4.71764 16.4129 4.58341 17.212 2.98261C17.7123 1.98058 18 1.36577 18 1.29894C18 1.11125 17.9074 0.974706 17.4842 0.538267C17.0645 0.105452 16.9112 0 16.7015 0C16.6347 0 16.0201 0.287829 15.0184 0.788213ZM2.92857 11.3344C0.601677 13.6679 0.409585 13.8784 0.224069 14.298C-0.101322 15.034 -0.0577211 15.9946 0.331209 16.6585C0.394779 16.767 0.471955 16.8669 0.560861 16.9558L1.04983 17.445C1.13873 17.5339 1.23862 17.6111 1.34708 17.6747C1.89354 17.995 2.71475 18.0911 3.33734 17.9076C4.04462 17.699 4.04023 17.7028 6.66938 15.0773L7.12466 14.6226C8.1598 13.5889 8.1604 11.9116 7.126 10.8772C6.09183 9.84296 4.41472 9.84412 3.38198 10.8797L2.92857 11.3344Z"
+                          fill="#0071BC"/>
+                  </svg>
+                  <span class="list__item-text">Комплектующие</span>
+                </a>
+              </li>
+              <li class="list__item">
+                <a class="list__item-link" href="#">
+                  <svg class="list__item-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1081_564)">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.89532 0.0712C4.68512 0.177892 4.61151 0.350217 4.61151 0.735539C4.61151 0.911051 4.75379 1.05333 4.9293 1.05333L6.80559 1.05333H8.68187C8.85738 1.05333 8.99966 0.911051 8.99966 0.735539C8.99966 0.343959 8.92638 0.176556 8.70807 0.0694775C8.56918 0.00138428 8.49726 -0.00121712 6.79791 0.00025935C5.11205 0.00173582 5.02586 0.00496998 4.89532 0.0712ZM4.91356 2.16947C4.76729 2.24614 2.53782 4.64958 2.46754 4.80633C2.42409 4.90322 2.41769 5.67024 2.42596 9.78061C2.43528 14.4283 2.43872 14.648 2.50407 14.8155C2.54166 14.9119 2.62785 15.0741 2.69561 15.1759C2.77022 15.288 2.77022 15.434 2.69561 15.5461C2.06847 16.4886 2.59717 17.7253 3.72653 17.9577C3.99889 18.0137 13.9962 18.0143 14.2728 17.9583C15.3986 17.7304 15.9299 16.4872 15.3037 15.5461C15.2291 15.434 15.2291 15.288 15.3037 15.1759C15.5829 14.7562 15.5624 15.0863 15.5735 10.8356C15.5819 7.6287 15.5754 7.0128 15.532 6.91595C15.4679 6.77253 11.0486 2.25377 10.89 2.16947C10.7826 2.11234 10.5692 2.10795 7.90263 2.10795C5.23671 2.10795 5.0225 2.11234 4.91356 2.16947ZM10.2827 4.34529C10.4226 4.41848 10.7919 4.77315 11.7908 5.79374C12.5183 6.53703 13.1513 7.19434 13.1974 7.25435C13.2436 7.31435 13.3073 7.44938 13.3391 7.55439C13.4834 8.03114 13.2518 8.54601 12.7877 8.78017C12.6284 8.86057 12.5568 8.8741 12.2908 8.8741C11.7873 8.8741 11.8079 8.88992 10.2771 7.32585C9.54434 6.57718 8.90726 5.91572 8.86136 5.85596C8.76124 5.7255 8.67055 5.44796 8.67055 5.2718C8.67055 4.95025 8.89384 4.55361 9.16579 4.39201C9.50664 4.18952 9.94959 4.17096 10.2827 4.34529ZM9.31495 10.7121C9.44561 10.8026 9.96074 11.579 10.2468 12.1164C10.699 12.9661 10.7485 13.4065 10.4549 13.968C10.2265 14.4051 9.77753 14.7197 9.26094 14.8049C8.41384 14.9446 7.57772 14.3933 7.39557 13.5752C7.32986 13.28 7.34595 13.0945 7.46809 12.7405C7.67909 12.1287 8.50647 10.7916 8.74672 10.674C8.90678 10.5956 9.17259 10.6134 9.31495 10.7121ZM8.80018 12.4561C8.59131 12.8244 8.45114 13.1513 8.45114 13.27C8.45114 13.5123 8.73718 13.7791 8.99696 13.7791C9.30164 13.7791 9.57594 13.4872 9.53659 13.205C9.51454 13.047 9.08128 12.1938 9.01184 12.1717C8.98836 12.1642 8.8931 12.2922 8.80018 12.4561Z"
+                            fill="#0071BC"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1081_564">
+                        <rect width="18" height="18" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="list__item-text">Расходные материалы</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <section class="main__container">
         <nav class="breadcrumbs">
           <ul class="breadcrumbs__list">
@@ -220,7 +1235,12 @@
           <ul class="catalog__list catalog__list--no-photo">
             <li class="catalog__item">
               <a class="catalog__link" href="#">
-                Прокладки, уплотнения, помпы охлаждения
+                Корпус помпы
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">
+                Крыльчатки, шпонки
               </a>
             </li>
             <li class="catalog__item">
@@ -235,7 +1255,12 @@
             </li>
             <li class="catalog__item">
               <a class="catalog__link" href="#">
-                Прокладки, уплотнения, помпы охлаждения
+                Стакан помпы
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">
+                Термостат
               </a>
             </li>
           </ul>
