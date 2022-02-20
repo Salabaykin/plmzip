@@ -8,15 +8,23 @@ export function formQuantity() {
       if (button) {
         const input = quantity.querySelector('input');
         const dataMaxCount: number = Number(input?.dataset.maxcount);
+        const dataMinCount: number = Number(input?.dataset.mincount);
         let value: number = Number(input?.value);
         if (input && value >= 0) {
           if (isPlus) {
-            // eslint-disable-next-line no-plusplus
-            if (value < dataMaxCount) value++;
+            if (dataMaxCount) {
+              // eslint-disable-next-line no-plusplus
+              if (value < dataMaxCount) value++;
+            } else {
+              // eslint-disable-next-line no-plusplus
+              value++;
+            }
           } else {
             // eslint-disable-next-line no-plusplus
             --value;
-            if (value <= 0) value = 0;
+            if (dataMinCount) {
+              if (value <= dataMinCount) value = dataMinCount;
+            } else if (value <= 0) value = 0;
           }
           input.value = String(value);
         }
