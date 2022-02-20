@@ -75,8 +75,7 @@
 
 .card-page__gallery {
   grid-area: gallery;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
   gap: 8px 8px;
   height: 100%;
   max-height: calc(100vw / 1.4);
@@ -97,8 +96,14 @@
 }
 
 .swiper.card-page-thumbs {
-  width: 100%;
-  height: auto;
+  width: 22%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .swiper.card-page-thumbs {
+    width: 20%;
+  }
 }
 
 .card-page-thumbs .card-page__thumb {
@@ -114,7 +119,7 @@
 
 .swiper.card-page-slider {
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 0;
 }
 
